@@ -1,0 +1,46 @@
+@use "variables"
+@use "mixins"
+@use "typography"
+
+.header
+  position: sticky
+  z-index: 999
+  top: 0
+  right: 0
+  left: 0
+  height: 6rem
+  padding-inline: variables.$gap__m
+  box-shadow: 0 0 1.5rem variables.$color__shadow
+  background-color: variables.$color__white
+  .container
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__brand--mobile
+    display: none
+  &__brand--desktop
+    height: 3rem
+
+  .nav
+    &__item
+      display: inline
+      align-self: center
+    &__link
+      width: max-content
+      box-sizing: border-box
+      padding: variables.$gap__m
+      transition: 0.3s
+      &:hover
+        scale: 120%
+        color: variables.$color__main
+.button-header
+  display: none
+
+.link__active
+  font-weight: bold
+  color: variables.$color__main
+
+
+
+

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Warhammer 40,000: Space Marine 2 muestra un nuevo vistazo a su gameplay</title>
+  <link
+          rel="icon"
+          type="image/png"
+          href="/img/meta-icons/favicon32redondo.png"
+  >
+  <link
+          rel="apple-touch-icon"
+          href="/img/meta-icons/touch-icon-iphone.png"
+  >
+  <link
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="/img/meta-icons/apple-touch-icon/touch-icon-ipad.png"
+  >
+  <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/img/meta-icons/apple-touch-icon/touch-icon-iphone-retina.png"
+  >
+  <link
+          rel="apple-touch-icon"
+          sizes="167x167"
+          href="/img/meta-icons/apple-touch-icon/touch-icon-ipad-retina.png"
+  >
+  <meta
+          name="theme-color"
+          content="#8250E8"
+  >
+  <meta
+          name="theme-color"
+          content="#8250E8"
+          media="(prefers-color-scheme: light)"
+  >
+  <meta
+          name="theme-color"
+          content="#8250E8"
+          media="(prefers-color-scheme: dark)"
+  >
+  <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+  >
+  <meta
+          name="author"
+          content="David Garzón"
+  >
+  <meta
+          name="keywords"
+          content="html, css, javascript, videojuegos, gaming, noticias"
+  >
+  <meta
+          name="description"
+          content="Portal de noticias sobre videojuegos actuales"
+  >
+  <meta
+          property="og:image"
+          content="img/screenshot.png"
+  >
+  <meta
+          property="og:title"
+          content="Re-play"
+  >
+  <meta
+          property="og:type"
+          content="website"
+  >
+  <meta
+          property="og:url"
+          content=""
+  >
+  <meta
+          name="twitter:card"
+          content="summary"
+  >
+  <meta
+          name="twitter:site"
+          content="@Replay_spain"
+  >
+  <meta
+          name="twitter:creator"
+          content="@Replay_spain"
+  >
+  <meta
+          property="og:image:secure_url"
+          content="https://..."
+  >
+  <meta
+          property="og:image:type"
+          content="image/jpeg"
+  >
+  <meta
+          property="og:image:width"
+          content="400"
+  >
+  <meta
+          property="og:image:height"
+          content="300"
+  >
+  <meta
+          property="og:image:alt"
+          content=""
+  >
+  <!-- Fuentes importadas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Fuentes importadas -->
+  
+  <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+  <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+  <link rel="stylesheet" href="sass/_typography.sass">
+  
+  <!-- Carrousel swiperJS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- Fin Carrousel swiperJS -->
+  <!-- ALPINEJS -->
+  <script src="https://unpkg.com/alpinejs" defer></script>
+  <!-- End ALPINEJS -->
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- End AOS -->
+</head>
+<body>
+<header class="header" x-data="{ open: false }">
+  <div class="container">
+    <a class="header__brand-link" href="index.html">
+      <img class="image header__brand header__brand--mobile" src="img/header-responsive/logo-xs.svg" alt="logo">
+      <img class="image header__brand header__brand--desktop" src="img/header-responsive/logo-desktop.webp" alt="logo">
+    </a>
+    <nav class="nav" :class="open ? 'nav--show' : ''">
+      <ul class="nav__ul">
+        <li class="nav__item">
+          <a href="noticias-main.html" class="link nav__link link__active">Noticias</a>
+        </li>
+        <li class="nav__item">
+          <a href="analisis-main.html" class="link nav__link">Análisis</a>
+        </li>
+        <li class="nav__item">
+          <a href="guias-main.html" class="link nav__link">Guías</a>
+        </li>
+        <li class="nav__item">
+          <a href="juegos-main.html" class="link nav__link">Juegos</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="button-header header__button" aria-hidden="true" @click="open = !open">
+      <img class="image"
+           alt="boton"
+           :src="open ? 'img/header-responsive/close.svg' : 'img/header-responsive/open.svg'">
+    </button>
+  </div>
+</header>
+<main>
+  <div class="scroll-to-top">
+    <a href="#top" class="anchor">
+      <div class="square">
+        <span class="arrow"></span>
+      </div>
+    </a>
+  </div>
+  <div class="container">
+    <div class="headboard">
+      <div class="headboard__decoration--left"></div>
+      <h2 class="headboard__title">Noticia</h2>
+      <div class="headboard__decoration--right"></div>
+    </div>
+    <section class="report">
+      <article class="container">
+        <h1 class="report__title">Warhammer 40,000: Space Marine 2 muestra un nuevo vistazo a su gameplay</h1>
+        <h2 class="report__subtitle">El juego de acción llega este año y Focus Entertainment presenta un vídeo con jugabilidad de la esperada secuela de Space Marine.</h2>
+        <img class="image report__image" src="img/noticias/warhammer-space-marine-2/1.png" alt="warhammer intro">
+        <p class="report__text">
+          Focus Entertainment y la desarrolladora Saber Interactive han mostrado un nuevo vídeo de Warhammer 40,000: Space Marine 2 con un minuto de gameplay. El título de acción está previsto en PlayStation 5, Xbox Series y PC para 2023, sin una fecha más concreta.
+        </p>
+        <div data-aos="zoom-in" data-aos="zoom-in" class="container__video">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TgxVQRTXtz0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <p class="report__text">
+          "La galaxia corre peligro. Es el fin numerosos planetas. El Imperio te necesita", dice su historia. "Despliega las habilidades sobrehumanas y la brutalidad de un Marine Espacial, el mejor cuerpo de guerreros del Emperador. Aprovecha tus capacidades mortíferas y un arsenal devastador para acabar con las implacables hordas del enemigo. Aplaca los horrores de la galaxia en épicas batallas sobre planetas remotos. Descubre misterios oscuros y pon freno a la noche eterna para demostrar tu fidelidad".
+        </p>
+        <p class="report__text">
+          El equipo destaca que Space Marine regresa con una experiencia de mucha acción en el universo Warhammer 40,000 con la participación del actor Clive Standen (Vikings, Taken) en el papel del Titus, Capitán del Capítulo de Marines Espaciales Ultramarines y Comandante de su 2ª Compañía. "Podrás encontrar un juego rápido y fluido con la mejor experiencia de Saber Interactive, el equipo y la tecnología de World War Z".
+        </p>
+        <img data-aos="zoom-in" class="image report__image" src="img/noticias/warhammer-space-marine-2/2.png" alt="warhammer intro">
+        <h2 class="report__title">
+          Secuela de un juego muy querido
+        </h2>
+        <p class="report__text">
+          Warhammer 40.000: Space Marine se lanzó en septiembre de 2011 para Xbox 360, PlayStation 3 y PC. La recepción de la crítica especializada fue tibia y no funcionó especialmente bien en ventas, pero su propuesta de Gears of War aún más sangriento y frenético cautivó a algunos sectores. Aquel título estaba desarrollado por Relic Entertainment (Company of Heroes, Age of Empires IV).
+        </p>
+        <img data-aos="zoom-in" class="image report__image" src="img/noticias/warhammer-space-marine-2/3.png" alt="warhammer intro">
+        <p class="report__text">
+          Recientemente os hablamos de las virtudes del original: "Aunque Relic jamás ocultó los parecidos con Gears of War, sí es cierto que se intentaba diferenciar a sendos juegos con pequeños detalles [...]. Quedaba claro que Space Marine iba a ser un TPS de distancias muy cortas y con combates que te pondrían en apuros constantemente"
+        </p>
+      </article>
+    </section>
+    <section class="section-guia">
+      <div class="container">
+        <hgroup class="hgroup_title">
+          <div class="headboard">
+            <div class="headboard__decoration--left"></div>
+            <h2 class="headboard__title">Imágenes</h2>
+            <div class="headboard__decoration--right"></div>
+          </div>
+        </hgroup>
+        <div class="imagenes-grid">
+          <div class="imagenes-item">
+            <img data-aos="zoom-in" data-aos-delay="200" class="img" src="img/noticias/warhammer-space-marine-2/1.png" alt="warhammer space marine 2" onclick="openModal ('img/noticias/warhammer-space-marine-2/1.png')">
+          </div>
+          <div class="imagenes-item">
+            <img data-aos="zoom-in" data-aos-delay="200" class="img" src="img/noticias/warhammer-space-marine-2/2.png" alt="warhammer space marine 2" onclick="openModal('img/noticias/warhammer-space-marine-2/2.png')">
+          </div>
+          <div class="imagenes-item">
+            <img data-aos="zoom-in" data-aos-delay="200" class="img" src="img/noticias/warhammer-space-marine-2/3.png" alt="warhammer space marine 2" onclick="openModal('img/noticias/warhammer-space-marine-2/3.png')">
+          </div>
+          <div class="imagenes-item">
+            <img data-aos="zoom-in" data-aos-delay="200" class="img" src="img/noticias/warhammer-space-marine-2/4.png" alt="warhammer space marine 2" onclick="openModal('img/noticias/warhammer-space-marine-2/4.png')">
+          </div>
+          <div class="imagenes-item">
+            <img data-aos="zoom-in" data-aos-delay="200" class="img" src="img/noticias/warhammer-space-marine-2/5.png" alt="warhammer space marine 2" onclick="openModal('img/noticias/warhammer-space-marine-2/5.png')">
+          </div>
+          <div class="imagenes-item">
+            <img data-aos="zoom-in" data-aos-delay="200" class="img" src="img/noticias/warhammer-space-marine-2/6.png" alt="warhammer space marine 2" onclick="openModal('img/noticias/warhammer-space-marine-2/6.png')">
+          </div>
+        </div>
+        <div id="modal" class="modal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img id="modalImage" src="" alt="cerrar imagen">
+        </div>
+      </div>
+    </section>
+    <section class="related">
+      <div class="container">
+        <div class="headboard">
+          <div class="headboard__decoration--left"></div>
+          <h2 class="headboard__title">Noticias relacionadas</h2>
+          <div class="headboard__decoration--right"></div>
+        </div>
+      </div>
+      <article class="container-noticia">
+        <img data-aos="zoom-in" class="image last__image" src="img/noticias/3-marathon/marathon-1.png" alt="">
+        <h2 class="last__title">Marathon, el nuevo shooter de Bungie, estrena su primer vídeo documental</h2>
+        <a class="boton-morado-noticias last__time link" href="ultimas-noticias-marathon.html" >Ver noticia completa</a>
+        <div class="last__decoration"></div>
+      </article>
+      <article class="container-noticia">
+        <img data-aos="zoom-in" class="image last__image" src="img/noticias/1-dragons-dogma/1.png" alt="">
+        <h2 class="last__title">Dragon's Dogma 2 presenta su primer gameplay en PlayStation Showcase</h2>
+        <a class="boton-morado-noticias last__time link" href="noticia-1-dragons-dogma.html" >Ver noticia completa</a>
+        <div class="last__decoration"></div>
+      </article>
+      <article class="container-noticia">
+        <img data-aos="zoom-in" class="image last__image" src="img/noticias/metal-gear/1.png" alt="">
+        <h2 class="last__title">El traje negro de Peter Parker en Marvel's Spider-Man 2 divide a los fans</h2>
+        <a class="boton-morado-noticias last__time link" href="noticia-5-metal-gear.html" >Ver noticia completa</a>
+        <div class="last__decoration"></div>
+      </article>
+    </section>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer__section1">
+    <nav class="footer__nav">
+      <a href="index.html" class="footer__link link">Noticias</a>
+      <div class="footer__decoration" ></div>
+      <a href="analisis-main.html" class="footer__link link">Análisis</a>
+      <div class="footer__decoration" ></div>
+      <a href="guias-main.html" class="footer__link link">Guías</a>
+      <div class="footer__decoration" ></div>
+      <a href="juegos-main.html" class="footer__link link">Juegos</a>
+      <div class="footer__decoration" ></div>
+    </nav>
+  </div>
+  <div class="footer__section2">
+    <div class="footer__logo">
+      <img src="img/footer-logo.svg/" alt="Logo de la web">
+    </div>
+    <div class="footer__terms">
+      <a target="_blank" href="condiciones-de-uso.html" class="footer__terms-link link">Condiciones de uso</a>
+      <a target="_blank" href="aviso-legal.html" class="footer__terms-link link">Política de privacidad</a>
+      <a target="_blank" href="politica-de-cookies.html" class="footer__terms-link link">Política de cookies</a>
+      <a target="_blank" href="contacto.html" class="footer__terms-link link">Contacto</a>
+    </div>
+    <div class="footer__social-media">
+      <a target="_blank" href="https://www.facebook.com/profile.php?id=100093371010609"><img src="img/social-media/facebook-logo.svg" alt="Facebook"></a>
+      <a target="_blank" href="https://www.youtube.com/"><img src="img/social-media/youtube-logo.svg" alt="Youtube"></a>
+      <a target="_blank" href="https://twitter.com/Replay_spain"><img src="img/social-media/twitter-logo.png" alt="twitter"></a>
+      <a target="_blank" href="https://www.instagram.com/replay_spain/"><img src="img/social-media/instagram-logo.svg" alt="instagram"></a>
+      <a target="_blank" href="https://www.twitch.tv/"><img src="img/social-media/twitch-logo.svg" alt="twitch"></a>
+    </div>
+  </div>
+  <div class="footer__section3">
+    <p class="footer__copyright">Copyright re-play 2017-2023 - Todos los derechos reservados ©</p>
+  </div>
+</footer>
+<script>
+  function openModal(imageUrl) {
+    let modal = document.getElementById("modal");
+    let modalImage = document.getElementById("modalImage");
+    
+    modal.style.display = "block";
+    modalImage.src = imageUrl;
+  }
+  
+  function closeModal() {
+    let modal = document.getElementById("modal");
+    
+    modal.style.display = "none";
+  }
+  AOS.init();
+</script>
+</body>
+</html>

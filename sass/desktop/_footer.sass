@@ -1,0 +1,68 @@
+@use "variables"
+@use "mixins"
+@use "typography"
+
+.footer
+  display: flex
+  flex-direction: column
+  padding-top: variables.$gap__xxl
+  &__section1
+    background-color: variables.$color__main
+    font-family: typography.$font__title
+    padding: 1rem
+    text-align: center
+    justify-content: space-between
+    align-items: center
+  &__decoration
+    align-self: center
+    width: 14px
+    height: 14px
+    background-color: white
+    border-radius: 50px
+    top: 50%
+    left: 50%
+  &__nav
+    display: flex
+    justify-content: center
+
+  &__link
+    color: variables.$color__white
+    font-size: variables.$gap__ml
+    margin: 0 2rem
+    transition: 0.3s
+    &:hover
+      scale: 115%
+  &__section2
+    background-color: black
+    color: variables.$color__white
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 1rem
+    font-size: variables.$gap__ml
+  &__logo img
+    width: 8rem
+    margin: 2rem
+    transition: 0.3s
+    &:hover
+      scale: 120%
+  &__terms-link
+    color: white
+    margin-right: variables.$gap__xl
+    transition: 0.3s
+    &:hover
+      scale: 110%
+  &__social-media img
+    width: 30px
+    padding-inline: 0.2rem
+    transition: 0.3s
+    &:hover
+      scale: 120%
+  &__section3
+    display: block
+    background-color: variables.$color__text
+    color: variables.$color__white
+    align-items: center
+    text-align: center
+    padding-block: 0
+    font-weight: 600

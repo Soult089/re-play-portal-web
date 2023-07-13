@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Noticia: Dragon's Dogma 2 presenta su gameplay</title>
+    <link
+            rel="icon"
+            type="image/png"
+            href="/img/meta-icons/favicon32redondo.png"
+    >
+    <link
+            rel="apple-touch-icon"
+            href="/img/meta-icons/touch-icon-iphone.png"
+    >
+    <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="/img/meta-icons/apple-touch-icon/touch-icon-ipad.png"
+    >
+    <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/img/meta-icons/apple-touch-icon/touch-icon-iphone-retina.png"
+    >
+    <link
+            rel="apple-touch-icon"
+            sizes="167x167"
+            href="/img/meta-icons/apple-touch-icon/touch-icon-ipad-retina.png"
+    >
+    <meta
+            name="theme-color"
+            content="#8250E8"
+    >
+    <meta
+            name="theme-color"
+            content="#8250E8"
+            media="(prefers-color-scheme: light)"
+    >
+    <meta
+            name="theme-color"
+            content="#8250E8"
+            media="(prefers-color-scheme: dark)"
+    >
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    >
+    <meta
+            name="author"
+            content="David Garzón"
+    >
+    <meta
+            name="keywords"
+            content="html, css, javascript, videojuegos, gaming, noticias"
+    >
+    <meta
+            name="description"
+            content="Portal de noticias sobre videojuegos actuales"
+    >
+    <meta
+            property="og:image"
+            content="img/screenshot.png"
+    >
+    <meta
+            property="og:title"
+            content="Re-play"
+    >
+    <meta
+            property="og:type"
+            content="website"
+    >
+    <meta
+            property="og:url"
+            content=""
+    >
+    <meta
+            name="twitter:card"
+            content="summary"
+    >
+    <meta
+            name="twitter:site"
+            content="@Replay_spain"
+    >
+    <meta
+            name="twitter:creator"
+            content="@Replay_spain"
+    >
+    <meta
+            property="og:image:secure_url"
+            content="https://..."
+    >
+    <meta
+            property="og:image:type"
+            content="image/jpeg"
+    >
+    <meta
+            property="og:image:width"
+            content="400"
+    >
+    <meta
+            property="og:image:height"
+            content="300"
+    >
+    <meta
+            property="og:image:alt"
+            content=""
+    >
+    <!-- Fuentes importadas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Fuentes importadas -->
+    
+    <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+    <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+    <link rel="stylesheet" href="sass/_typography.sass">
+    
+    <!-- Carrousel swiperJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Fin Carrousel swiperJS -->
+    <!-- ALPINEJS -->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <!-- End ALPINEJS -->
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- End AOS -->
+</head>
+<body>
+<header class="header" x-data="{ open: false }">
+    <div class="container">
+        <a class="header__brand-link" href="index.html">
+            <img class="image header__brand header__brand--mobile" src="img/header-responsive/logo-xs.svg" alt="logo">
+            <img class="image header__brand header__brand--desktop" src="img/header-responsive/logo-desktop.webp" alt="logo">
+        </a>
+        <nav class="nav" :class="open ? 'nav--show' : ''">
+            <ul class="nav__ul">
+                <li class="nav__item">
+                    <a href="noticias-main.html" class="link nav__link link__active">Noticias</a>
+                </li>
+                <li class="nav__item">
+                    <a href="analisis-main.html" class="link nav__link">Análisis</a>
+                </li>
+                <li class="nav__item">
+                    <a href="guias-main.html" class="link nav__link">Guías</a>
+                </li>
+                <li class="nav__item">
+                    <a href="juegos-main.html" class="link nav__link">Juegos</a>
+                </li>
+            </ul>
+        </nav>
+        <button class="button-header header__button" aria-hidden="true" @click="open = !open">
+            <img class="image"
+                 alt="boton"
+                 :src="open ? 'img/header-responsive/close.svg' : 'img/header-responsive/open.svg'">
+        </button>
+    </div>
+</header>
+<main>
+    <div class="scroll-to-top">
+        <a href="#top" class="anchor">
+            <div class="square">
+                <span class="arrow"></span>
+            </div>
+        </a>
+    </div>
+    <div class="container">
+        <div class="headboard">
+            <div class="headboard__decoration--left"></div>
+            <h2 class="headboard__title">Noticia</h2>
+            <div class="headboard__decoration--right"></div>
+        </div>
+        <section class="report">
+            <article class="container">
+                <h1 class="report__title">Marathon, el nuevo shooter de Bungie, estrena su primer vídeo documental</h1>
+                <img class="image report__image" src="img/noticias/3-marathon/marathon-1.png" alt="imagen portada de marathon">
+                <h2 class="report__subtitle">El estudio de Destiny y Halo presenta un vídeo dedicado a su nuevo proyecto, presentado hace unas horas durante el PlayStation Showcase.
+                </h2>
+                <p class="report__text">
+                    Marathon fue uno de los primeros juegos de Bungie, y directamente el precursor en muchos casos de gran parte de la jugabilidad de Halo. Tanto Sony como Bungie han visto potencial para esta saga y han decidido traerla de nuevo a la vida para esta actual generación.</p>
+                <p class="report__text">
+                    Ha sido presentado hoy hace solo unos minutos en el evento Playstation Showcase 2023, en donde nos han deleitado con una simple, pero efectiva cinemática que, todo sea dicho, da una pista de que muy avanzado no está el juego.</p>
+                <div data-aos="zoom-in" class="container__video">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/S8MdC6tuUuc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <p class="report__text">
+                    El traje negro de Peter Parker presenta un aspecto pegajoso, ya que, como bien sabréis, está formado por un organismo alienígena que recubre el cuerpo del superhéroe, mientras que también tiene algunas partes parecidas a una armadura, algo que se puede apreciar en las hombreras y la espalda. Esto último no ha terminado de agradar a aquellos fans que consideran que no es demasiado lógico añadir "diseños complicados de armadura a los trajes de carne alienígena", aunque también podemos encontrar usuarios que han quedado muy satisfechos con el nuevo traje de Peter Parker y han señalado que es "genial" y que no hay nada de lo que quejarse.
+                </p>
+                <h2>Marathon deja de lado a las viejas consolas</h2>
+                <p class="report__text">La manera en la que lo traen de nuevo a escena parece que será en formato GaaS, es decir, un juego como servicio. No es que esté confirmado al 100%, pero es lo que se desprende de la información que tenemos.  Además, como y se adelantó cuando Sony compró a Bungie, sus juegos serían todos o en su mayoría multiplataforma, por lo que este no iba a ser menos.
+                </p>
+                <p class="report__text">
+                    Lo ha confirmado la cuenta oficial del juego en Twitter, donde desvela que no solo llegará a PS5, si no también a Xbox Series y PC, dejando de lado, por fin, las viejas consolas dentro de esta ecuación.
+                </p>
+                <p class="report__text">
+                    "Marathon es el inicio de una aventura increíble para Bungie que estará inspirada por la legendaria historia de nuestro estudio y con la que avanzaremos audazmente hacia el futuro", dijo el manager general de Marathon, Scott Taylor. "Vamos a aplicar todos los conocimientos que hemos adquirido en más de 30 años de crear mundos asombrosos y experiencias PvP innovadoras y lo pondremos todo en un juego que tenga un aspecto, un sonido y una jugabilidad sin precedentes en la historia de Bungie".
+                </p>
+                <h2>¿Te parece familiar?</h2>
+                <p class="report__text">
+                    ¿Te parece familiar? Sí, es una idea similar a la Escape from Tarkov, o lo que será próximamente el modo DMZ de Call of Duty: Warzone 2. Battlefield 2042 lo intentó con Hazard Zone, pero resultó ser un total fiasco. Lo que nadie puede negar es que los juegos de extracción siguen ganando popularidad, principalmente porque requieren una buena coordinación y comunicación entre los miembros del equipo.                </p>
+                <p class="report__text">
+                    "Incluso en esta etapa de desarrollo, es increíble ver la creatividad y la emoción que el juego genera en el interior Bungie", comenta el director de juego de Marathon, Christopher Barrett. "Nuestros equipos están comprometidos con crear una experiencia de juego centrada en PvP llena de tensión y emoción y situada en un mundo persistente, dinámico y con una historia vívida en la que las acciones de los jugadores tendrán consecuencias con el paso de cada temporada".
+                </p>
+                <img data-aos="zoom-in" class="image report__image" src="img/noticias/3-marathon/marathon-2.png" alt="#">
+                <h2>Marathon se lanzó en 1994 y tuvo dos secuelas, Marathon 2: Durandal y Marathon Infinity, en 1995 y 1996</h2>
+                <p class="report__text">
+                    Marathon fue descrito en su época como la respuesta de Mac al Doom de los PC. Este reinicio transcurre en un planeta que albergó una colonia humana y aspira a ser el "ejemplo definitivo de un juego como servicio", con recompensas por temporadas y progreso como unos de los aspectos principales de su diseño.
+                </p>
+                <p class="report__text">Bungie se comprometió a mantener sus lanzamientos multiplataforma tras su compra, por lo que además de PlayStation 5 también se lanzaría en PC y Xbox Series. En varias ocasiones el equipo ha mencionado su intención lanzar un juego diferente a Destiny en 2025. En 2018 registraron la marca Matter, de la que aún no conocemos su posible uso.
+                </p>
+            </article>
+        </section>
+        <section class="section-guia">
+            <div class="container">
+                <hgroup class="hgroup_title">
+                    <div class="headboard">
+                        <div class="headboard__decoration--left"></div>
+                        <h2 class="headboard__title">Imágenes</h2>
+                        <div class="headboard__decoration--right"></div>
+                    </div>
+                </hgroup>
+                <div class="imagenes-grid">
+                    <div class="imagenes-item">
+                        <img data-aos="zoom-in" data-aos-delay="200" class="img" src="img/noticias/3-marathon/marathon-1.png" alt="Imagen 1" onclick="openModal('img/noticias/3-marathon/marathon-1.png')">
+                    </div>
+                    <div class="imagenes-item">
+                        <img data-aos="zoom-in" data-aos-delay="400" class="img" src="img/noticias/3-marathon/marathon-2.png" alt="Imagen 2" onclick="openModal('img/noticias/3-marathon/marathon-2.png')">
+                    </div>
+                    <div class="imagenes-item">
+                        <img data-aos="zoom-in" data-aos-delay="600" class="img" src="img/noticias/3-marathon/marathon-3.png" alt="Imagen 2" onclick="openModal('img/noticias/3-marathon/marathon-3.png')">
+                    </div>
+                    
+                </div>
+                <button class="boton-morado">Ver todas</button>
+                
+                <div id="modal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img id="modalImage" src="" alt="cerrar imagen">
+                </div>
+            </div>
+        </section>
+        <section class="related">
+            <div class="container">
+                <div class="headboard">
+                    <div class="headboard__decoration--left"></div>
+                    <h2 class="headboard__title">Noticias relacionadas</h2>
+                    <div class="headboard__decoration--right"></div>
+                </div>
+            </div>
+            <article class="container-noticia">
+                <img data-aos="zoom-in" class="image last__image" src="img/noticias/1-dragons-dogma/related-4.png" alt="noticia relacionada 1 Dragons dogma">
+                <h2 class="last__title">Resident Evil 4 Remake se actualiza para corregir uno de los mejores bugs para 'speedruns'</h2>
+                <a class="boton-morado-noticias last__time link" href="noticia-2-dragons-dogma.html" >Ver noticia completa</a>
+                <div class="last__decoration"></div>
+            </article>
+            <article class="container-noticia">
+                <img data-aos="zoom-in" class="image last__image" src="img/noticias/warhammer-space-marine-2/1.png" alt="noticia relacionada 2 Dragons dogma">
+                <h2 class="last__title">Warhammer 40,000: Space Marine 2 muestra un nuevo vistazo a su gameplay</h2>
+                <a class="boton-morado-noticias last__time link" href="noticia-4-space-marine-2.html" >Ver noticia completa</a>
+                <div class="last__decoration"></div>
+            </article>
+            <article class="container-noticia">
+                <img data-aos="zoom-in" class="image last__image" src="img/noticias/neva/1.png" alt="noticia relacionada 3 Dragons dogma">
+                <h2 class="last__title">Neva, lo nuevo de los creadores de Gris, llegará en 2024 y presenta tráiler e imágenes</h2>
+                <a class="boton-morado-noticias last__time link" href="noticia-3-neva.html" >Ver noticia completa</a>
+                <div class="last__decoration"></div>
+            </article>
+        </section>
+    </div>
+</main>
+<footer class="footer">
+    <div class="footer__section1">
+        <nav class="footer__nav">
+            <a href="index.html" class="footer__link link">Noticias</a>
+            <div class="footer__decoration" ></div>
+            <a href="analisis-main.html" class="footer__link link">Análisis</a>
+            <div class="footer__decoration" ></div>
+            <a href="guias-main.html" class="footer__link link">Guías</a>
+            <div class="footer__decoration" ></div>
+            <a href="juegos-main.html" class="footer__link link">Juegos</a>
+            <div class="footer__decoration" ></div>
+        </nav>
+    </div>
+    <div class="footer__section2">
+        <div class="footer__logo">
+            <img src="img/footer-logo.svg/" alt="Logo de la web">
+        </div>
+        <div class="footer__terms">
+            <a target="_blank" href="condiciones-de-uso.html" class="footer__terms-link link">Condiciones de uso</a>
+            <a target="_blank" href="aviso-legal.html" class="footer__terms-link link">Política de privacidad</a>
+            <a target="_blank" href="politica-de-cookies.html" class="footer__terms-link link">Política de cookies</a>
+            <a target="_blank" href="contacto.html" class="footer__terms-link link">Contacto</a>
+        </div>
+        <div class="footer__social-media">
+            <a target="_blank" href="https://www.facebook.com/profile.php?id=100093371010609"><img src="img/social-media/facebook-logo.svg" alt="Facebook"></a>
+            <a target="_blank" href="https://www.youtube.com/"><img src="img/social-media/youtube-logo.svg" alt="Youtube"></a>
+            <a target="_blank" href="https://twitter.com/Replay_spain"><img src="img/social-media/twitter-logo.png" alt="twitter"></a>
+            <a target="_blank" href="https://www.instagram.com/replay_spain/"><img src="img/social-media/instagram-logo.svg" alt="instagram"></a>
+            <a target="_blank" href="https://www.twitch.tv/"><img src="img/social-media/twitch-logo.svg" alt="twitch"></a>
+        </div>
+    </div>
+    <div class="footer__section3">
+        <p class="footer__copyright">Copyright re-play 2017-2023 - Todos los derechos reservados ©</p>
+    </div>
+</footer>
+<script>
+    function openModal(imageUrl) {
+        let modal = document.getElementById("modal");
+        let modalImage = document.getElementById("modalImage");
+
+        modal.style.display = "block";
+        modalImage.src = imageUrl;
+    }
+
+    function closeModal() {
+        let modal = document.getElementById("modal");
+
+        modal.style.display = "none";
+    }
+    AOS.init();
+</script>
+</body>
+</html>

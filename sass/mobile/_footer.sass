@@ -1,0 +1,67 @@
+@use "variables"
+@use "mixins"
+@use "typography"
+
+.footer
+  flex-direction: column
+  padding-top: variables.$gap__xxl
+
+  &__section1
+    background-color: variables.$color__main
+    font-family: typography.$font__title
+    padding: 1rem
+    text-align: center
+    align-items: center
+  &__nav
+    display: inline-block
+    justify-content: center
+    padding-block: variables.$gap__xs
+
+  &__link
+    color: variables.$color__white
+    font-size: variables.$gap__ml
+    margin: variables.$gap__xs
+
+  &__section2
+    display: grid
+    grid-template-columns: 1fr
+    grid-auto-rows: 25% 50% 25%
+    grid-template-areas: "logo" "list" "social"
+    background-color: black
+    color: variables.$color__white
+    font-size: variables.$gap__ml
+  &__logo
+    grid-area: logo
+    display: flex
+    align-self: center
+    justify-content: center
+  &__logo img
+    width: 8rem
+    margin: 2rem
+  &__terms-link
+    padding-block: variables.$gap__xs
+    grid-area: list
+    display: flex
+    justify-content: center
+    align-items: center
+    color: white
+    margin-inline: variables.$gap__xl
+  &__social-media
+    grid-area: social
+    display: flex
+    align-self: center
+    justify-content: center
+  &__social-media img
+    width: 30px
+    padding-inline: 0.6rem
+    padding-block: variables.$gap__xl
+  &__section3
+    display: block
+    background-color: variables.$color__text
+    color: variables.$color__white
+    align-items: center
+    text-align: center
+    padding-block: 0
+    font-weight: 600
+    &__copyright
+      margin-block: 0

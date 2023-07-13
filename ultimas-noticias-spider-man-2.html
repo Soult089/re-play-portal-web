@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Noticia: Dragon's Dogma 2 presenta su gameplay</title>
+  <link
+          rel="icon"
+          type="image/png"
+          href="/img/meta-icons/favicon32redondo.png"
+  >
+  <link
+          rel="apple-touch-icon"
+          href="/img/meta-icons/touch-icon-iphone.png"
+  >
+  <link
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="/img/meta-icons/apple-touch-icon/touch-icon-ipad.png"
+  >
+  <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/img/meta-icons/apple-touch-icon/touch-icon-iphone-retina.png"
+  >
+  <link
+          rel="apple-touch-icon"
+          sizes="167x167"
+          href="/img/meta-icons/apple-touch-icon/touch-icon-ipad-retina.png"
+  >
+  <meta
+          name="theme-color"
+          content="#8250E8"
+  >
+  <meta
+          name="theme-color"
+          content="#8250E8"
+          media="(prefers-color-scheme: light)"
+  >
+  <meta
+          name="theme-color"
+          content="#8250E8"
+          media="(prefers-color-scheme: dark)"
+  >
+  <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+  >
+  <meta
+          name="author"
+          content="David Garzón"
+  >
+  <meta
+          name="keywords"
+          content="html, css, javascript, videojuegos, gaming, noticias"
+  >
+  <meta
+          name="description"
+          content="Portal de noticias sobre videojuegos actuales"
+  >
+  <meta
+          property="og:image"
+          content="img/screenshot.png"
+  >
+  <meta
+          property="og:title"
+          content="Re-play"
+  >
+  <meta
+          property="og:type"
+          content="website"
+  >
+  <meta
+          property="og:url"
+          content=""
+  >
+  <meta
+          name="twitter:card"
+          content="summary"
+  >
+  <meta
+          name="twitter:site"
+          content="@Replay_spain"
+  >
+  <meta
+          name="twitter:creator"
+          content="@Replay_spain"
+  >
+  <meta
+          property="og:image:secure_url"
+          content="https://..."
+  >
+  <meta
+          property="og:image:type"
+          content="image/jpeg"
+  >
+  <meta
+          property="og:image:width"
+          content="400"
+  >
+  <meta
+          property="og:image:height"
+          content="300"
+  >
+  <meta
+          property="og:image:alt"
+          content=""
+  >
+  <!-- Fuentes importadas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Fuentes importadas -->
+  
+  <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+  <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+  <link rel="stylesheet" href="sass/_typography.sass">
+  
+  <!-- Carrousel swiperJS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- Fin Carrousel swiperJS -->
+  <!-- ALPINEJS -->
+  <script src="https://unpkg.com/alpinejs" defer></script>
+  <!-- End ALPINEJS -->
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- End AOS -->
+</head>
+<body>
+<header class="header" x-data="{ open: false }">
+  <div class="container">
+    <a class="header__brand-link" href="index.html">
+      <img class="image header__brand header__brand--mobile" src="img/header-responsive/logo-xs.svg" alt="logo">
+      <img class="image header__brand header__brand--desktop" src="img/header-responsive/logo-desktop.webp" alt="logo">
+    </a>
+    <nav class="nav" :class="open ? 'nav--show' : ''">
+      <ul class="nav__ul">
+        <li class="nav__item">
+          <a href="#" class="link nav__link link__active">Noticias</a>
+        </li>
+        <li class="nav__item">
+          <a href="analisis-main.html" class="link nav__link">Análisis</a>
+        </li>
+        <li class="nav__item">
+          <a href="guias-main.html" class="link nav__link">Guías</a>
+        </li>
+        <li class="nav__item">
+          <a href="juegos-main.html" class="link nav__link">Juegos</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="button-header header__button" aria-hidden="true" @click="open = !open">
+      <img class="image"
+           alt="boton"
+           :src="open ? 'img/header-responsive/close.svg' : 'img/header-responsive/open.svg'">
+    </button>
+  </div>
+</header>
+<main>
+  <div class="scroll-to-top">
+    <a href="#top" class="anchor">
+      <div class="square">
+        <span class="arrow"></span>
+      </div>
+    </a>
+  </div>
+  <div class="container">
+    <div class="headboard">
+      <div class="headboard__decoration--left"></div>
+      <h2 class="headboard__title">Noticia</h2>
+      <div class="headboard__decoration--right"></div>
+    </div>
+    <section class="report">
+      <article class="container">
+        <h1 class="report__title">El traje negro de Peter Parker en Marvel's Spider-Man 2 divide a los fans
+        </h1>
+        <img class="image report__image" src="img/noticias/2-spider-man-2/spider-man-1.png" alt="#">
+        <h2 class="report__subtitle">El nuevo traje simbiótico de Peter Parker presenta un aspecto pegajoso y cuenta con algunas partes que parecen simular una armadura. Este último detalle no ha terminado de convencer a algunos.
+        </h2>
+        <p class="report__text">
+          Marvel's Spider-Man 2 se dejó ver al final del PlayStation Showcase en un extenso y espectacular gameplay que deleitó a los fans del trepamuros con escenas de acción frenéticas, saltos imposibles, coreografías de peleas con animaciones realmente trabajadas y una pizca de información acerca de la historia que nos contará esta secuela de Marvel's Spider-Man. A pesar de que, en general, dejó buenas sensaciones entre los usuarios, en redes sociales y foros de videojuegos podemos encontrar cierta disparidad de opiniones en lo que respecta al nuevo traje simbiótico de Peter Parker, el cual se lució por primera vez en este último vistazo.</p>
+        <p class="report__text">
+          El gameplay revela que esta vez los hombres araña tendrán que enfrentarse a Kraven el Cazador, pero Peter Parker y Miles Morales no estarán solos, ya que Venom no será solo un personaje, sino que se unirá a Peter para crear el Traje Negro, que permite usar poderes simbióticos en el fragor de la batalla. Aunque seguro que esto le pasará factura a Peter...</p>
+        <p class="report__text">
+          El traje negro de Peter Parker presenta un aspecto pegajoso, ya que, como bien sabréis, está formado por un organismo alienígena que recubre el cuerpo del superhéroe, mientras que también tiene algunas partes parecidas a una armadura, algo que se puede apreciar en las hombreras y la espalda. Esto último no ha terminado de agradar a aquellos fans que consideran que no es demasiado lógico añadir "diseños complicados de armadura a los trajes de carne alienígena", aunque también podemos encontrar usuarios que han quedado muy satisfechos con el nuevo traje de Peter Parker y han señalado que es "genial" y que no hay nada de lo que quejarse.
+        </p>
+        <p class="report__text">
+          Los Spideys también tendrán compañía con un nuevo dron que añadirá algunos golpes narrativos extra. Y también habrá otras bondades, como alas de telaraña para atravesar más fácilmente la ciudad, y redes que usar en combate para abatir enemigos en silencio. Miles cuenta incluso con nuevos movimientos bioeléctricos personales con los que puede electrocutar a varios enemigos en área. En cuanto a cómo funcionará todo esto en la práctica, ambos protagonistas tendrán sus propios árboles de habilidades para desbloquear y progresar, así como uno de uso compartido.
+        </p>
+        <img data-aos="zoom-in" class="image report__image" src="img/noticias/2-spider-man-2/spider-man-2.png" alt="#">
+        <p class="report__text">
+          Os recordamos que Marvel's Spider-Man 2 aterrizará en exclusiva para PlayStation 5 en una fecha todavía por determinar de otoño de este mismo año. En el siguiente enlace podéis echarle un vistazo a una comparativa que pone el nuevo título frente a su predecesor.
+        </p>
+        <p class="report__text">
+          Aquí tienes el trailer al completo:
+        </p>
+        <div data-aos="zoom-in" class="container__video">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/8S4v7aQxUVo?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </article>
+    </section>
+    <section class="section-guia">
+      <div class="container">
+        <hgroup class="hgroup_title">
+          <div class="headboard">
+            <div class="headboard__decoration--left"></div>
+            <h2 class="headboard__title">Imágenes</h2>
+            <div class="headboard__decoration--right"></div>
+          </div>
+        </hgroup>
+        <div class="imagenes-grid">
+          <div class="imagenes-item">
+            <img data-aos="zoom-in" class="img" src="img/noticias/2-spider-man-2/spider-man-2.png" alt="Imagen 1" onclick="openModal('img/noticias/2-spider-man-2/spider-man-2.png')">
+          </div>
+          <div class="imagenes-item">
+            <img data-aos="zoom-in" class="img" src="img/noticias/2-spider-man-2/spider-man-1.png" alt="Imagen 2" onclick="openModal('img/noticias/2-spider-man-2/spider-man-1.png')">
+          </div>
+        </div>
+        <div id="modal" class="modal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img id="modalImage" src="" alt="cerrar imagen">
+        </div>
+      </div>
+    </section>
+    <section class="related">
+      <div class="container">
+        <div class="headboard">
+          <div class="headboard__decoration--left"></div>
+          <h2 class="headboard__title">Noticias relacionadas</h2>
+          <div class="headboard__decoration--right"></div>
+        </div>
+      </div>
+      <article class="container-noticia">
+        <img data-aos="zoom-in" class="image last__image" src="img/noticias/1-dragons-dogma/related-4.png" alt="noticia relacionada 1 Dragons dogma">
+        <h2 class="last__title">Resident Evil 4 Remake se actualiza para corregir uno de los mejores bugs para 'speedruns'</h2>
+        <a class="boton-morado-noticias last__time link" href="noticia-2-dragons-dogma.html" >Ver noticia completa</a>
+        <div class="last__decoration"></div>
+      </article>
+      <article class="container-noticia">
+        <img data-aos="zoom-in" class="image last__image" src="img/noticias/3-marathon/marathon-1.png" alt="noticia relacionada 1 Dragons dogma">
+        <h2 class="last__title">Marathon, el nuevo shooter de Bungie, estrena su primer vídeo documental</h2>
+        <a class="boton-morado-noticias last__time link" href="ultimas-noticias-marathon.html" >Ver noticia completa</a>
+        <div class="last__decoration"></div>
+      </article>
+      <article class="container-noticia">
+        <img data-aos="zoom-in" class="image last__image" src="img/noticias/neva/1.png" alt="noticia relacionada 3 Dragons dogma">
+        <h2 class="last__title">Neva, lo nuevo de los creadores de Gris, llegará en 2024 y presenta tráiler e imágenes.</h2>
+        <a class="boton-morado-noticias last__time link" href="noticia-3-neva.html" >Ver noticia completa</a>
+        <div class="last__decoration"></div>
+      </article>
+    </section>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer__section1">
+    <nav class="footer__nav">
+      <a href="noticias-main.html" class="footer__link link">Noticias</a>
+      <div class="footer__decoration" ></div>
+      <a href="analisis-main.html" class="footer__link link">Análisis</a>
+      <div class="footer__decoration" ></div>
+      <a href="guias-main.html" class="footer__link link">Guías</a>
+      <div class="footer__decoration" ></div>
+      <a href="juegos-main.html" class="footer__link link">Juegos</a>
+      <div class="footer__decoration" ></div>
+    </nav>
+  </div>
+  <div class="footer__section2">
+    <div class="footer__logo">
+      <img src="img/footer-logo.svg/" alt="Logo de la web">
+    </div>
+    <div class="footer__terms">
+      <a target="_blank" href="condiciones-de-uso.html" class="footer__terms-link link">Condiciones de uso</a>
+      <a target="_blank" href="aviso-legal.html" class="footer__terms-link link">Política de privacidad</a>
+      <a target="_blank" href="politica-de-cookies.html" class="footer__terms-link link">Política de cookies</a>
+      <a target="_blank" href="contacto.html" class="footer__terms-link link">Contacto</a>
+    </div>
+    <div class="footer__social-media">
+      <a target="_blank" href="https://www.facebook.com/profile.php?id=100093371010609"><img src="img/social-media/facebook-logo.svg" alt="Facebook"></a>
+      <a target="_blank" href="https://www.youtube.com/"><img src="img/social-media/youtube-logo.svg" alt="Youtube"></a>
+      <a target="_blank" href="https://twitter.com/Replay_spain"><img src="img/social-media/twitter-logo.png" alt="twitter"></a>
+      <a target="_blank" href="https://www.instagram.com/replay_spain/"><img src="img/social-media/instagram-logo.svg" alt="instagram"></a>
+      <a target="_blank" href="https://www.twitch.tv/"><img src="img/social-media/twitch-logo.svg" alt="twitch"></a>
+    </div>
+  </div>
+  <div class="footer__section3">
+    <p class="footer__copyright">Copyright re-play 2017-2023 - Todos los derechos reservados ©</p>
+  </div>
+</footer>
+<script>
+  function openModal(imageUrl) {
+    let modal = document.getElementById("modal");
+    let modalImage = document.getElementById("modalImage");
+    
+    modal.style.display = "block";
+    modalImage.src = imageUrl;
+  }
+  
+  function closeModal() {
+    let modal = document.getElementById("modal");
+    
+    modal.style.display = "none";
+  }
+  AOS.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+@use "variables"
+@use "mixins"
+
+.item-ancla
+  list-style-type: none
+
+.decoration-margin
+  margin-block: 3rem
+  width: 60%
+  margin-inline: auto
+
+.ancla-analisis
+  color: variables.$color__main
+  padding-block: 0.9rem
+  transition: 0.2s
+  &:hover
+    scale: 103%
+    font-weight: bold
+
+.headboard-analisis
+  text-transform: uppercase
+  margin-top: 3rem
+
+.span-ancla
+  margin-top: 10rem
+
+.analisis__image
+  max-width: 100%
+
+.container__related
+  display: inline-flex
+
+// CONTAINER GRIS: GRID
+
+.puntuacion__container
+  background-color: #f2f2f2
+  border-radius: 16px
+  height: 21rem
+  margin-block: 1rem
+  width: 100%
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-template-rows: 7rem 7rem 7rem 7rem
+
+  .puntuacion__graficos
+    grid-column: 1 / 1
+    grid-row: 1 / 1
+    margin: auto
+
+  .puntuacion__duracion
+    grid-area: duracion
+    grid-column: 3 / 3
+    grid-row: 1 / 1
+    margin: auto
+    align-items: center
+    justify-content: center
+    border-radius: 12px
+
+  .puntuacion__jugabilidad
+    grid-area: jugabilidad
+    grid-column: 1 / 1
+    grid-row: 2 / 2
+    margin: auto
+  .puntuacion__un-jugador
+    grid-area: un-jugador
+    grid-column: 3 / 3
+    grid-row: 2 / 2
+    margin: auto
+  .puntuacion__sonido
+    grid-area: sonido
+    grid-column: 1 / 1
+    grid-row: 3 / 3
+    margin: auto
+  .puntuacion__multijugador
+    grid-area: multijugador
+    grid-column: 3 / 4
+    grid-row: 3 / 3
+    margin: auto
+  .progress-bar
+    grid-column: 2 / 2
+    grid-row: 1 / 3
+
+
+// TÍTULO PROGRESO
+.puntuacion-title
+  font-size: variables.$gap__m
+  font-weight: bold
+  text-align: center
+
+// BARRA PROGRESO HORIZONTAL //
+
+.progress
+  height: 1rem
+  width: 14rem
+  border-radius: 12px
+  background-color: #DFDFDF
+  margin: 2rem 2rem 2rem 2rem
+
+.progress-bar-horizontal
+  height: 100%
+  background: variables.$color__main
+  display: inline-block
+  align-items: center
+  border-radius: 12px
+
+// BARRA PROGRESO CIRCULAR
+.progress-bar
+  margin: 2rem
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 230px
+  height: 230px
+  border-radius: 50%
+  background: radial-gradient(closest-side, #f2f2f2 79%, transparent 80% 100%), conic-gradient(variables.$color__negativo 48%, transparent 0)
+  grid-area: circle
+
+
+.progress-bar::before
+  content: "48" //numero que aparece de %//
+  font-size: variables.$gap__header
+
+
+.valoracion__title
+  display: inline-flex
+
+.valoracion__dot
+  margin-right: variables.$gap__xs
+
+.triangulo-positivo
+  width: 1px
+  height: 1px
+  margin-right: variables.$gap__xs
+  border-left: 10px solid transparent
+  border-right: 10px solid transparent
+  border-bottom: 15px solid variables.$color__positivo
+
+.triangulo-negativo
+  width: 1px
+  height: 1px
+  margin-right: variables.$gap__xs
+  border-left: 10px solid transparent
+  border-right: 10px solid transparent
+  border-top: 15px solid variables.$color__negativo

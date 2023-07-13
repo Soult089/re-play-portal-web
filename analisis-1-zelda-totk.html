@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Analisis: Zelda: Tears of the Kingdom</title>
+        <link
+                rel="icon"
+                type="image/png"
+                href="/img/meta-icons/favicon32redondo.png"
+        >
+        <link
+                rel="apple-touch-icon"
+                href="/img/meta-icons/touch-icon-iphone.png"
+        >
+        <link
+                rel="apple-touch-icon"
+                sizes="152x152"
+                href="/img/meta-icons/apple-touch-icon/touch-icon-ipad.png"
+        >
+        <link
+                rel="apple-touch-icon"
+                sizes="180x180"
+                href="/img/meta-icons/apple-touch-icon/touch-icon-iphone-retina.png"
+        >
+        <link
+                rel="apple-touch-icon"
+                sizes="167x167"
+                href="/img/meta-icons/apple-touch-icon/touch-icon-ipad-retina.png"
+        >
+        <meta
+                name="theme-color"
+                content="#8250E8"
+        >
+        <meta
+                name="theme-color"
+                content="#8250E8"
+                media="(prefers-color-scheme: light)"
+        >
+        <meta
+                name="theme-color"
+                content="#8250E8"
+                media="(prefers-color-scheme: dark)"
+        >
+        <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+        >
+        <meta
+                name="author"
+                content="David Garzón"
+        >
+        <meta
+                name="keywords"
+                content="html, css, javascript, videojuegos, gaming, noticias"
+        >
+        <meta
+                name="description"
+                content="Portal de noticias sobre videojuegos actuales"
+        >
+        <meta
+                property="og:image"
+                content="img/screenshot.png"
+        >
+        <meta
+                property="og:title"
+                content="Re-play"
+        >
+        <meta
+                property="og:type"
+                content="website"
+        >
+        <meta
+                property="og:url"
+                content=""
+        >
+        <meta
+                name="twitter:card"
+                content="summary"
+        >
+        <meta
+                name="twitter:site"
+                content="@Replay_spain"
+        >
+        <meta
+                name="twitter:creator"
+                content="@Replay_spain"
+        >
+        <meta
+                property="og:image:secure_url"
+                content="https://..."
+        >
+        <meta
+                property="og:image:type"
+                content="image/jpeg"
+        >
+        <meta
+                property="og:image:width"
+                content="400"
+        >
+        <meta
+                property="og:image:height"
+                content="300"
+        >
+        <meta
+                property="og:image:alt"
+                content=""
+        >
+        <!-- Fuentes importadas -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+        <!-- Fuentes importadas -->
+        
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+        <link rel="stylesheet" href="sass/_typography.sass">
+        
+        <!-- Carrousel swiperJS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <!-- Fin Carrousel swiperJS -->
+        <!-- ALPINEJS -->
+        <script src="https://unpkg.com/alpinejs" defer></script>
+        <!-- End ALPINEJS -->
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- End AOS -->
+    </head>
+    <body>
+        <header class="header" x-data="{ open: false }">
+            <div class="container">
+                <a class="header__brand-link" href="index.html">
+                    <img class="image header__brand header__brand--mobile" src="img/header-responsive/logo-xs.svg" alt="logo">
+                    <img class="image header__brand header__brand--desktop" src="img/header-responsive/logo-desktop.webp" alt="logo">
+                </a>
+                <nav class="nav" :class="open ? 'nav--show' : ''">
+                    <ul class="nav__ul">
+                        <li class="nav__item">
+                            <a href="noticias-main.html" class="link nav__link">Noticias</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="analisis-main.html" class="link nav__link link__active">Análisis</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="guias-main.html" class="link nav__link">Guías</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="juegos-main.html" class="link nav__link">Juegos</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="button-header header__button" aria-hidden="true" @click="open = !open">
+                    <img class="image"
+                         alt="boton"
+                         :src="open ? 'img/header-responsive/close.svg' : 'img/header-responsive/open.svg'">
+                </button>
+            </div>
+        </header>
+        <main>
+            <div class="scroll-to-top">
+                <a href="#top" class="anchor">
+                    <div class="square">
+                        <span class="arrow"></span>
+                    </div>
+                </a>
+            </div>
+            <div id="top" class="container">
+                <div class="headboard">
+                    <div class="headboard__decoration--left"></div>
+                    <h2 class="headboard__title">Análisis</h2>
+                    <div class="headboard__decoration--right"></div>
+                </div>
+                <section class="report">
+                    <article class="container">
+                        <h1 class="report__title">The Legend of Zelda: Tears of the kingdom, análisis.</h1>
+                        <img data-aos="" class="image report__image" src="img/Analisis/1-zelda-totk/1.png" alt="#">
+                        <h2 class="report__subtitle">La secuela de Breath of the Wild llega a Nintendo Switch para convertirse en el Zelda más grande de todos, revolucionando la fórmula que nos dejó sin palabras hace seis años y recuperando todo aquello que ha hecho de The Legend of Zelda una saga única.</h2>
+                        <div class="last__decoration decoration-margin"></div>
+                        <p class="report__text">
+                            No es ningún secreto que para conseguir revitalizar la saga The Legend of Zelda, Eiji  Aonuma, Hidemaro Fujibayashi y el resto del equipo en Nintendo volvieron a las raíces, fijando la mirada sobre el origen de todo: el primer Zelda para Famicom y NES.
+                        </p>
+                        <p class="report__text">
+                            Y el resto es historia: The Legend of Zelda: Breath of the
+                            Wild llegó en 2017 y revolucionó la forma de entender los
+                            juegos de mundo abierto, dando un nuevo sentido a la palabra libertad y convirtiéndose en la aventura total. Fue una mirada al pasado para construir un nuevo y brillante futuro.
+                        </p>
+                        <p class="report__text">
+                            ¿Cómo mejorar eso? ¿Cómo superar al juego con mayor número de puntuaciones perfectas de la historia? ¿Cómo perfeccionar la perfección? La respuesta ha sido muy sencilla: volviendo a poner la mirada en el pasado. Pero en lugar de volver al primer Zelda, esta vez sus responsables han viajado en el tiempo hasta la que generalmente está considerada como la mejor entrega de toda la saga, así como uno de los mejores juegos de la historia. Hablamos, por supuesto, de The Legend of Zelda: Ocarina of Time.
+                        </p>
+                        <p class="report__text">
+                            De esta forma, han logrado que The Legend of Zelda: Tears of the Kingdom combine la sensación de libertad y aventura
+                            de Breath of the Wild, con las mazmorras de diseño
+                            exquisito, los jefes memorables y una historia con esa
+                            clase de momentos épicos que sólo son posibles en The
+                            Legend of Zelda.</p>
+                        <div class="last__decoration decoration-margin"></div>
+                        
+                        <section class="report__article">
+                            <div class="headboard">
+                                <div class="headboard__decoration--left"></div>
+                                <h2 class="headboard__title">El análisis de The Legend of Zelda: Tears of the Kingdom de Nintendo para su Switch de re-play:</h2>
+                                <div class="headboard__decoration--right"></div>
+                            </div>
+                            <ul class="ancla-ul">
+                                <li data-aos="fade-up" class="item-ancla">
+                                    <a class="link ancla-analisis" href="#1">Cambios de The Legend of Zelda: Tears of the Kingdom para superar a Breath of the Wild</a>
+                                </li>
+                                <li data-aos="fade-up" class="item-ancla" >
+                                    <a class="link ancla-analisis" href="#2">El gameplay de The Legend of Zelda: Tears of the Kingdom</a>
+                                </li>
+                                <li data-aos="fade-up" class="item-ancla">
+                                    <a class="link ancla-analisis" href="#3">El diseño de Hyrule y los cambios en el mapa</a>
+                                </li>
+                                <li data-aos="fade-up" class="item-ancla">
+                                    <a class="link ancla-analisis" href="#4">¿Cuántas horas de juego dura The Legend of Zelda: Tears of the Kingdom?</a>
+                                </li>
+                                <li data-aos="fade-up" class="item-ancla">
+                                    <a class="link ancla-analisis" href="#5">Apartado audiovisual de The Legend of Zelda: Tears of the Kingdom</a>
+                                </li>
+                                <li data-aos="fade-up" class="item-ancla">
+                                    <a class="link ancla-analisis" href="#6">Cuánto cuesta The Legend of Zelda: Tears of the Kingdom y dónde puedes jugarlo</a>
+                                </li>
+                                <li data-aos="fade-up" class="item-ancla">
+                                    <a class="link ancla-analisis" href="#7">La opinión de HobbyConsolas de The Legend of Zelda: Tears of the Kingdom</a>
+                                </li>
+                                <span class="span-ancla" id="1"></span>
+                                <li data-aos="fade-up" class="item-ancla">
+                                    <a class="link ancla-analisis" href="#8">Nota: lo mejor y peor de The Legend of Zelda: Tears of the Kingdom</a>
+                                </li>
+                            </ul>
+                            <article class="punto-analisis">
+                               <div class="headboard headboard-analisis">
+                                   <div class="headboard__decoration--left"></div>
+                                   <h2 class="headboard__title">Recuperando la esencia de la saga: historia, mazmorras, jefes y "momentos Zelda"</h2>
+                                   <div class="headboard__decoration--right"></div>
+                               </div>
+                               <p class="report__text">
+                                   En el momento en que iniciamos la partida, Tears of the Kingdom deja claro que sabe muy bien cuáles eran los puntos flacos de Breath of the Wild y viene dispuesto a corregirlos. Desde el minuto uno, la narrativa es mucho más potente y está más centrada. Como en Ocarina of Time, cada región de Hyrule está afectada por un problema y Link debe hacer todo lo necesario para salvar a sus habitantes.
+                               </p>
+                               <p class="report__text">
+                                   Esto nos lleva a seguir una cadena de objetivos, siempre muy variados y entretenidos, que concluye en las mazmorras. Lo que más llama la atención es que dentro de estas cadenas hay secciones que, sin ser parte de la mazmorra, son igual de épicas y memorables. De esta forma, han conseguido que la historia esté mejor contada, pero también que los personajes secundarios que nos acompañan estén mejor integrados a nivel jugable y resulten muchísimo más interesantes. Y todo ello, sin restar ni un ápice de libertad.
+                               </p>
+                               <p class="report__text">
+                                   Las referencias a Ocarina of Time son constantes: personajes, situaciones, melodías, puzles... Incluso las mazmorras, que en Tears of the Kingdom reciben el nombre de templos. En lugar de volver al estilo clásico, su diseño sigue apostando por la libertad de acción, así que nada más llegar se nos dan una serie de objetivos que podemos cumplir en cualquier orden. Ahora bien, cada templo cuenta con algún elemento o mecánica protagonista, a menudo asociada al personaje que nos acompaña. Esto, unido a que todos tienen una identidad visual y una estructura únicos, consigue que cada mazmorra tenga mucha más personalidad
+                               </p>
+                               
+                               <p class="report__text">
+                                   Además, algunos puzles nos han parecido excepcionales, obligándonos a conocer muy bien las mecánicas de juego para darles usos que jamás se nos hubiesen ocurrido. Y hemos tenido que recurrir al mapa en muchas ocasiones. Hay templos a los que sólo les falta la brújula y unas cuantas llaves para poder considerarlos mazmorras clásicas. En cuanto a los jefes, también suponen una mejora en toda regla. Todos son diferentes desde un punto de vista visual y mecánico y requieren estrategias concretas para derrotarlos. La única pega que les encontramos es que, salvo una excepción, nos han parecido muy fáciles... Aunque lo compensan con enfrentamientos realmente épicos.
+                               </p>
+                                <span class="span-ancla" id="2"></span>
+                               <p class="report__text">
+                                   Porque todo lo que no tenía de épico Breath of the Wild, lo tiene Tears of the Kingdom. Hemos perdido la cuenta de las veces que se nos han puesto los pelos de punta con la historia y podemos decir sin miedo que contiene algunos de los mejores momentos de toda la saga The Legend of Zelda. Sí, es así de bueno.</p>
+                                
+                            </article>
+                            <article class="punto-analisis">
+                                <div class="headboard headboard-analisis">
+                                    <div class="headboard__decoration--left"></div>
+                                    <h2 class="headboard__title">Jugabilidad y gameplay de The Legend of Zelda: Tears of the Kingdom en Nintendo Switch</h2>
+                                    <div class="headboard__decoration--right"></div>
+                                </div>
+                                <p class="report__text">
+                                    The Legend of Zelda Tears: of the Kingdom conserva la misma base jugable de Breath of the Wild, así que aspectos como el desplazamiento o el sistema de combate son prácticamente iguales. Sin embargo, hay una novedad que lo cambia absolutamente TODO: en lugar de la piedra sheikah y los módulos, el misterioso nuevo brazo derecho de Link le da acceso a nuevos poderes.
+                                </p>
+                                <p class="report__text">
+                                    En primer lugar está la combinación, un poder que, como su nombre indica, nos permite combinar dos objetos con diferentes resultados... Hay muchísimas posibilidades, pero al final este poder nos ha parecido algo limitado comparado con el resto. Su verdadera función, en realidad, es solventar otro aspecto de Breath of the Wild que no convenció a muchos jugadores: el deterioro de las armas. Y la solución ha sido... hacer que todas las armas se rompan con más facilidad. Suena absurdo, pero nos parece una idea brillante: al combinar las armas oxidadas con partes de monstruo o con otros materiales, se obtienen armas más poderosas, resistentes y con nuevos efectos, de manera que el juego nos invita continuamente a probar y descubrir combinaciones nuevas.
+                                </p>
+                                <p class="report__text">
+                                    En segundo lugar tenemos la infiltración, un poder que nos permite atravesar techos para alcanzar posiciones elevadas o llegar a la cima de una montaña sin necesidad de escalar. Al principio nos dio la impresión de que se trataba de una habilidad muy situacional, pero nos ha sorprendido la gran cantidad de usos que tiene, especialmente en mazmorras y santuarios.
+                                </p>
+                                <p class="report__text">
+                                    En tercer lugar tenemos el retroceso, una habilidad que nos permite hacer que un objeto retroceda en el tiempo (¿otra referencia a Ocarina of Time? Otra referencia a Ocarina of Time). Aunque más bien deberíamos decir que es la habilidad que permite "romper" el juego por completo.
+                                </p>
+                                <span class="span-ancla" id="3"></span>
+                                <p class="report__text">
+                                    Hemos perdido la cuenta de las veces que hemos resuelto puzles gracias a este poder de una manera que claramente no era la adecuada. Y no decimos esto como algo malo: todo lo contrario. Se nota que después de ver cómo los jugadores "rompían" Breath of the Wild, en Tears of the Kingdom han querido darnos aún más herramientas para ese fin. Y no veáis lo satisfactorio que resulta.
+                                </p>
+                                <img data-aos="fade-up" class="image report__image" src="img/Analisis/1-zelda-totk/2.png" alt="#">
+                            </article>
+                            <article class="punto-analisis">
+                                <div class="headboard headboard-analisis">
+                                    <div class="headboard__decoration--left"></div>
+                                    <h2 class="headboard__title">Un Hyrule, tres reinos</h2>
+                                    <div class="headboard__decoration--right"></div>
+                                </div>
+                                <p class="report__text">
+                                    Tears of the Kingdom coge todo lo que había en Breath of the Wild y construye encima. Armas, atuendos, objetos, enemigos, melodías, el complejo sistema de física y de acción-reacción... Todo lo que contenía el reino de Hyrule (y el propio reino) está presente en Tears of the Kingdom. Inevitablemente, esto significa que desde el principio hay una importante sensación de familiaridad: vais a tener que volver a superar santuarios para aumentar la salud o la resistencia, vais a tener que resolver minipuzles para encontrar a los kolog, vais a cocinar, vais a buscar postas y atalayas al explorar y vais a tener que fotografiar absolutamente todo para completar la enciclopedia.
+                                </p>
+                                <p class="report__text">
+                                    Siendo honestos, no creemos que fuese necesario recuperar tanto contenido. O quizás sería más acertado decir que se podría haber gestionado de una mejor manera. Por ejemplo, nos habría gustado ver más novedades en lo que a atuendos se refiere durante las primeras horas. Y tampoco habría estado mal que se introdujesen armas con nuevos sets de movimientos.
+                                </p>
+                                <p class="report__text">
+                                    Tiene sentido a la hora de darle una continuidad, pero cuando los cofres más raros del juego nos recompensan con los atuendos que en Breath of the Wild se obtenían escaneando amiibo, se siente menos como continuidad y más como una forma de reaprovechar el contenido. Puede que veamos una atalaya en la lejanía y al acercarnos nos topemos con una posta. En la posta nos encargan una nueva misión secundaria (que resulta muy llamativa) y escuchamos rumores sobre un misterio que se ha divisado al sur de allí. Antes de irnos de la posta nos topamos con un pozo... y cuando salimos de explorar el pozo vemos un santuario a unos metros de distancia...
+                                </p>
+                                <p class="report__text">
+                                    El diseño de este segundo mapa, compuesto por islas flotantes, es completamente diferente. En lugar de tener que sortear un río o decidir si escalamos una montaña o la bordeamos, debemos descubrir cómo alcanzar la siguiente isla aprovechando los poderes de Link y los artilugios zonnan a nuestra disposición, lo que hace que la exploración sea un puzle en sí mismo. Visualizadlo de esta manera: en lugar de un mundo abierto en las nubes, lo que presenta Tears of the Kingdom son niveles flotantes, con un recorrido más marcado pero que sigue ofreciendo un gran nivel de libertad y momentos de creatividad. Al recorrerlos, es inevitable pensar que para diseñarlos han tomado algo de inspiración de cierto fontanero.
+                                </p>
+                                <span class="span-ancla" id="4"></span>
+                                <p class="report__text">
+                                    Pero ahora viene lo mejor: al mostrar novedades sobre Tears of the Kingdom, Nintendo ha estado en todo momento señalando al cielo... cuando en realidad, la gran sorpresa se encuentra bajo tierra. Nos encantaría hablar en profundidad sobre esto, pero es una de esas cosas que creemos que merece la pena descubrir y experimentar por vosotros mismos.  Lo único que vamos a decir es que en Tears of the Kingdom hay, en esencia, tres mapas diferentes. Y que este tercero es bastante más abierto y extenso que el cielo, que es el más sorprendente y que también tiene un diseño que rompe radicalmente con los otros dos.
+                                </p>
+                            </article>
+                            <article class="punto-analisis">
+                                <div class="headboard headboard-analisis">
+                                    <div class="headboard__decoration--left"></div>
+                                    <h2 class="headboard__title">¿Es difícil The Legend of Zelda: Tears of the Kingdom?</h2>
+                                    <div class="headboard__decoration--right"></div>
+                                </div>
+                                <p class="report__text">
+                                    Como decíamos antes, Zelda Tears of the Kingdom conserva la base jugable de Breath of the Wild, pero hay una serie de cambios no demasiado evidentes a primera vista que tienen como objetivo hacer que sea un juego mucho más desafiante. Las primeras horas de Breath of the Wild infundían respeto por lo nuevo que resultaba todo, pero una vez superábamos esa barrera era relativamente sencillo abrirse paso entre los enemigos sin despeinarse.
+                                </p>
+                                <p class="report__text">
+                                    En Tears of the Kingdom no es así. Desde el principio del juego y hasta el final, el nivel de desafío es muy elevado; los enemigos golpean con fuerza y ni la protección de las grandes hadas es capaz de evitar que nos arranquen un buen puñado de corazones. Pero no se ha recurrido únicamente a aumentar el daño, también han rediseñado una serie de aspectos para mejorar el combate. Hay nuevos tipos de enemigos (los centaleones son un chiste al lado de los griock), algunos llevan protecciones que nos obligan a cambiar de arma o a aprovechar las propiedades elementales, los mandobles y las lanzas no interrumpen continuamente los ataques de los enemigos (de los más poderosos, al menos) y la ventana para hacer "parrys" y esquivas perfectas es mucho más reducida.
+                                </p>
+                                <span class="span-ancla" id="5"></span>
+                                <p class="report__text">
+                                    Sigue siendo posible parar la acción en cualquier momento para restaurar salud a base de comida o potenciar los atributos de Link temporalmente, pero también han pensado en eso y se han sacado trucos nuevos de la manga para complicarnos las cosas. En definitiva: Tears of the Kingdom es uno de los Zelda más difíciles.
+                                </p>
+                            </article>
+                            <div class="punto-analisis">
+                                <div class="headboard headboard-analisis">
+                                    <div class="headboard__decoration--left"></div>
+                                    <h2 class="headboard__title">¿Cuántas horas dura la historia de The Legend of Zelda: Tears of the Kingdom?</h2>
+                                    <div class="headboard__decoration--right"></div>
+                                </div>
+                                <p class="report__text">
+                                    En Nintendo estiman que completar The Legend of Zelda: Tears of the Kingdom centrándonos en la historia principal puede llevarnos unas cincuenta horas aproximadamente. Pero creemos que es un dato poco realista, pues en estos momentos nuestra Nintendo Switch indica que hemos jugado durante 115 horas (o más).
+                                </p>
+                                <p class="report__text">
+                                    Ya os hemos explicado el motivo: es imposible seguir el camino principal sin desviarse porque siempre va a haber algo que llame nuestra atención. Siempre. Y por supuesto no estamos ni remotamente cerca de haber visto todo lo que ofrece Tears of the Kingdom, pues aún tenemos una tonelada de misiones secundarias pendientes, cerca de la mitad de santuarios por completar y una infinidad de zonas de los mapas que aún no hemos visitado.
+                                </p>
+                                <span class="span-ancla" id="6"></span>
+                                <p class="report__text">
+                                    Si tenéis pensado completar Zelda Tears of the Kingdom al 100%, aquí hay juego para meses.</p>
+                                <img data-aos="fade-up" class="image report__image" src="img/Analisis/1-zelda-totk/3.png" alt="#">
+                            </div>
+                            <article class="punto-analisis">
+                                <div class="headboard headboard-analisis">
+                                    <div class="headboard__decoration--left"></div>
+                                    <h2 class="headboard__title">Gráficos y sonido de The Legend of Zelda: Tears of the Kingdom</h2>
+                                    <div class="headboard__decoration--right"></div>
+                                </div>
+                                <p class="report__text">
+                                    En lo que al apartado gráfico se refiere, Zelda Tears of the Kingdom supone un salto respecto a Breath of the Wild. No es un salto de gigante, pero es una mejora evidente. Donde más se aprecia es en la distancia de dibujado, pudiendo contemplar con más claridad elementos lejanos del escenario. También hay algún efecto nuevo (como las gotas de agua cuando Link se lanza a un cuerpo de agua), una leve mejora en las texturas y puede que un aumento general de nitidez. Quizás lo más impresionante a nivel técnico sea la ausencia de tiempos de carga, o mejor dicho, lo bien camuflados que están al cambiar entre los diferentes mapas.
+                                </p>
+                                <p class="report__text">
+                                    Pero también es evidente que Tears of the Kingdom exprime Switch al máximo y que la consola, con sus seis años, no puede dar más de sí. El "popping" es constante, especialmente en el caso de enemigos y NPCs. Y pese a que la distancia de dibujado ha aumentado, sigue habiendo una capa blanquecina que cubre los escenarios lejanos, restándoles color y detalle. Pero el problema más grave de Tears of the Kingdom es el rendimiento: desde las primeras horas se puede advertir que acciones como mover la cámara mientras usamos la Ultramano provocan pequeñas ralentizaciones.  Y al avanzar en la aventura, llegamos a zonas de Hyrule con una mayor carga gráfica en las que las ralentizaciones son más graves y habituales. En ningún momento llega al punto de interferir con la jugabilidad, pero es un problema demasiado evidente como para pasarlo por alto.
+                                </p>
+                                <span class="span-ancla" id="7"></span>
+                                <p class="report__text">
+                                    Nos atreveríamos a decir que el rendimiento de Tears of the Kingdom es peor que el de Breath of the Wild de lanzamiento... Pero eso también nos da esperanzas, porque si corrigieron los problemas del primero, no hay motivos para pensar que no sucederá lo mismo con la secuela.
+                                </p>
+                            </article>
+                            <article class="punto-analisis">
+                                <div class="headboard headboard-analisis">
+                                    <div class="headboard__decoration--left"></div>
+                                    <h2 class="headboard__title">Precio y plataformas disponibles</h2>
+                                    <div class="headboard__decoration--right"></div>
+                                </div>
+                                <p class="report__text">
+                                    The Legend of Zelda: Tears of the Kingdom se pone a la venta para Nintendo Switch el 12 de mayo de 2023 a un precio recomendado de <strong>69,99 € </strong>.
+                                </p>
+                                <p class="report__text">
+                                    También se ha puesto a la venta una edición coleccionista de The Legend of Zelda: Tears of the Kingdom a un precio de <strong>129,99 €</strong>.
+                                </p>
+                                <p class="report__text">
+                                    Además de la caja con el cartucho de juego, esta edición incluye una caja edición coleccionista, un steelbook, un póster metálico ICONART, un setde cuatro pines y un libro de ilustraciones. Por desgracia la edición coleccionista es muy limitada, así que está agotada en todas partes desde los primeros días y en estos momentos es muy complicado hacerse con ella.
+                                </p>
+                            </article>
+                            <article class="punto-analisis">
+                                <div class="headboard headboard-analisis">
+                                    <div class="headboard__decoration--left"></div>
+                                    <h2 class="headboard__title">Perfeccionando la perfección</h2>
+                                    <div class="headboard__decoration--right"></div>
+                                </div>
+                                <p class="report__text">
+                                    Seguro que muchos recordáis el tráiler de Breath of the Wild que se mostró durante el evento de presentación de Nintendo Switch, en enero de 2017.
+                                </p>
+                                <p class="report__text">
+                                    Y no exagero ni un poco si os digo que he perdido la cuenta de las veces que lo he visto... Y que lo vuelvo a ver hoy y se me empañan los ojos. Porque es increíble; absurdamente épico. Y aunque siempre voy a ser un firme defensor de la historia de Breath of the Wild, más centrada en los personajes y en su desarrollo, es cierto que apenas hubo momentos en todo el juego que despertasen en mí las mismas emociones que ese tráiler.
+                                </p>
+                                <p class="report__text">
+                                    Con Zelda Tears of the Kingdom, Nintendo ha repetido la jugada: hace tres semanas, publicaron un tráiler que estaba cortado exactamente por el mismo patrón: increíble, épico y con un saxofón capaz de elevar los niveles de expectación por encima de las nubes. La gran diferencia es que Tears of the Kingdom -el juego- me ha puesto los pelos de punta con sus situaciones épicas, ha hecho que gritase a la pantalla con sus sorpresas y ha conseguido que se me empañasen los ojos en los momentos más emocionantes. Exactamente como con el tráiler.
+                                </p>
+                                <span class="span-ancla" id="8"></span>
+                                <p class="report__text">
+                                    Y creo que por encima de todo, por encima de la apabullante cantidad de contenido, por encima de los mapas y las mazmorras con un diseño digno de ser estudiado y por encima de las mecánicas de las que van a surgir vídeos con locuras impensables durante los próximos cinco años, esa emoción es lo que buscamos en The Legend of Zelda y es lo que hace grande a Tears of the Kingdom.
+                                </p>
+                            </article>
+                            <section class="puntuacion">
+                                <div class="headboard headboard-analisis">
+                                    <div class="headboard__decoration--left"></div>
+                                    <h2 class="headboard__title">Puntuación</h2>
+                                    <div class="headboard__decoration--right"></div>
+                                </div>
+                                <div class="puntuacion__container">
+                                    <div data-aos="zoom-in-right" class="puntuacion__graficos">
+                                        <p class="puntuacion-title">Gráficos</p>
+                                        <div class="progress">
+                                            <div class="progress-bar-horizontal" style="width:75%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="zoom-in-right" class="puntuacion__jugabilidad">
+                                        <p  class="puntuacion-title">Jugabilidad</p>
+                                        <div class="progress">
+                                            <div class="progress-bar-horizontal" style="width:100%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="zoom-in-right" class="puntuacion__sonido">
+                                        <p class="puntuacion-title">Sonido</p>
+                                        <div class="progress">
+                                            <div class="progress-bar-horizontal" style="width:95%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000"  class="progress-bar-zelda">
+                                        <progress value="97" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
+                                    </div>
+                                    <div data-aos="zoom-in-left" class="puntuacion__duracion">
+                                        <p class="puntuacion-title">Duración</p>
+                                        <div class="progress">
+                                            <div class="progress-bar-horizontal" style="width:85%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="zoom-in-left" class="puntuacion__un-jugador" >
+                                        <p class="puntuacion-title">Un jugador</p>
+                                        <div class="progress">
+                                            <div class="progress-bar-horizontal" style="width:98%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="zoom-in-left"  class="puntuacion__multijugador">
+                                        <p class="puntuacion-title">Multijugador</p>
+                                        <div class="progress">
+                                            <div class="progress-bar-horizontal" style="width:5%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hgroup data-aos="fade-up" class="valoracion">
+                                    <h4 class="valoracion__title"><span class="valoracion__dot">🟣</span> VALORACIÓN</h4>
+                                    <p>Tears of the Kingdom reúne el poder de las aventuras, la sabiduría de la libertad y el valor de la creatividad, sin olvidar en ningún momento lo que hace tan especial a The Legend of Zelda: los momentos épicos y la capacidad para emocionar. No se equivocaban al decir que el título es un spoiler: hemos derramado lágrimas de alegría.</p>
+                                </hgroup>
+                                <hgroup data-aos="fade-up" class="lo-mejor">
+                                    <h4 class="valoracion__title"><div class="triangulo-positivo"></div>LO MEJOR</h4>
+                                    <p class="lo-mejor__text">Es épico hasta decir basta. Las nuevas habilidades y cómo potencian la libertad de acción. La sensación de aventura y el diseño de los escenarios.</p>
+                                </hgroup>
+                                <hgroup data-aos="fade-up" class="lo-peor">
+                                    <h4 class="valoracion__title"><span class="triangulo-negativo"></span>LO PEOR</h4>
+                                    <p class="lo-peor__text">El rendimiento es muy mejorable. Ha perdido el efecto sorpresa.</p>
+                                </hgroup>
+                            </section>
+                        </section>
+                    </article>
+                </section>
+                <section class="section-guia">
+                    <div class="container">
+                        <hgroup class="hgroup_title">
+                            <div class="headboard">
+                                <div class="headboard__decoration--left"></div>
+                                <h2 class="headboard__title">Imágenes</h2>
+                                <div class="headboard__decoration--right"></div>
+                            </div>
+                        </hgroup>
+                        <div class="imagenes-grid">
+                            <div class="imagenes-item">
+                                <img data-aos="zoom-in" data-aos-duration="600" class="img" src="img/Analisis/1-zelda-totk/1.png" alt="Imagen 1" onclick="openModal('img/Analisis/1-zelda-totk/1.png')">
+                            </div>
+                            <div class="imagenes-item">
+                                <img data-aos="zoom-in" data-aos-delay="200" data-aos-duration="600" class="img" src="img/Analisis/1-zelda-totk/2.png" alt="Imagen 2" onclick="openModal('img/Analisis/1-zelda-totk/2.png')">
+                            </div>
+                            <div class="imagenes-item">
+                                <img data-aos="zoom-in" data-aos-delay="400" data-aos-duration="600" class="img"  src="img/Analisis/1-zelda-totk/3.png" alt="Imagen 3" onclick="openModal('img/Analisis/1-zelda-totk/3.png')">
+                            </div>
+                            <div class="imagenes-item">
+                                <img data-aos="zoom-in" data-aos-duration="600" class="img"  src="img/Analisis/1-zelda-totk/4.png" alt="Imagen 4" onclick="openModal('img/Analisis/1-zelda-totk/4.png')">
+                            </div>
+                            <div class="imagenes-item">
+                                <img data-aos="zoom-in" data-aos-delay="200" data-aos-duration="600" class="img"  src="img/Analisis/1-zelda-totk/5.png" alt="Imagen 5" onclick="openModal('img/Analisis/1-zelda-totk/5.png')">
+                            </div>
+                            <div class="imagenes-item">
+                                <img data-aos="zoom-in" data-aos-delay="400" data-aos-duration="600" class="img"  src="img/Analisis/1-zelda-totk/6.png" alt="Imagen 6" onclick="openModal('img/Analisis/1-zelda-totk/6.png')">
+                            </div>
+                        </div>
+                        <button class="boton-morado">Ver todas</button>
+                        
+                        <div id="modal" class="modal">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <img id="modalImage" src="" alt="cerrar imagen">
+                        </div>
+                    </div>
+                </section>
+                <div class="container">
+                    <div class= "headboard">
+                        <div class="headboard__decoration--left"></div>
+                        <h2 class="headboard__title">Más análisis</h2>
+                        <div class="headboard__decoration--right"></div>
+                    </div>
+                </div>
+                <section class="related container__related">
+                    <article data-aos="fade-up" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/3-LOTR-gollum/gollum-3.png" alt="Analisis de Gollum">
+                        <h3 class="last__title">The Lord of the Rings: Gollum, análisis. Me duele decir esto como fan de Tolkien y de la fantasía, pero es un "quiero y no puedo".</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-2-lotr-gollum.html" >Ver noticia completa</a>
+                        <div class="last__decoration"></div>
+                    </article>
+                    <article data-aos="fade-up" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/2-system-shock/1.png" alt="analisis system shock">
+                        <h3 class="last__title">Análisis de System Shock Remake, un respetuoso reseteo de los shooters actuales</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-3-system-shock.html" >Ver noticia completa</a>
+                        <div class="last__decoration"></div>
+                    </article>
+                    <article data-aos="fade-up" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/4-disney-speedstorm/disney-speedstorm-3.png" alt="analisis disney speedstorm">
+                        <h3 class="last__title">Disney: Speedstorm, análisis. El nuevo juego de carreras desenfadado preparado y listo para ser más que competente rival para Mario Kart</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-4-disney-speedstorm.html" >Ver noticia completa</a>
+                        <div class="last__decoration"></div>
+                    </article>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__section1">
+                <nav class="footer__nav">
+                    <a href="index.html" class="footer__link link">Noticias</a>
+                    <div class="footer__decoration" ></div>
+                    <a href="analisis-main.html" class="footer__link link">Análisis</a>
+                    <div class="footer__decoration" ></div>
+                    <a href="guias-main.html" class="footer__link link">Guías</a>
+                    <div class="footer__decoration" ></div>
+                    <a href="juegos-main.html" class="footer__link link">Juegos</a>
+                    <div class="footer__decoration" ></div>
+                </nav>
+            </div>
+            <div class="footer__section2">
+                <div class="footer__logo">
+                    <img src="img/footer-logo.svg/" alt="Logo de la web">
+                </div>
+                <div class="footer__terms">
+                    <a target="_blank" href="condiciones-de-uso.html" class="footer__terms-link link">Condiciones de uso</a>
+                    <a target="_blank" href="aviso-legal.html" class="footer__terms-link link">Política de privacidad</a>
+                    <a target="_blank" href="politica-de-cookies.html" class="footer__terms-link link">Política de cookies</a>
+                    <a target="_blank" href="contacto.html" class="footer__terms-link link">Contacto</a>
+                </div>
+                <div class="footer__social-media">
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100093371010609"><img src="img/social-media/facebook-logo.svg" alt="Facebook"></a>
+                    <a target="_blank" href="https://www.youtube.com/"><img src="img/social-media/youtube-logo.svg" alt="Youtube"></a>
+                    <a target="_blank" href="https://twitter.com/Replay_spain"><img src="img/social-media/twitter-logo.png" alt="twitter"></a>
+                    <a target="_blank" href="https://www.instagram.com/replay_spain/"><img src="img/social-media/instagram-logo.svg" alt="instagram"></a>
+                    <a target="_blank" href="https://www.twitch.tv/"><img src="img/social-media/twitch-logo.svg" alt="twitch"></a>
+                </div>
+            </div>
+            <div class="footer__section3">
+                <p class="footer__copyright">Copyright re-play 2017-2023 - Todos los derechos reservados ©</p>
+            </div>
+        </footer>
+        <script>
+            function openModal(imageUrl) {
+                let modal = document.getElementById("modal");
+                let modalImage = document.getElementById("modalImage");
+    
+                modal.style.display = "block";
+                modalImage.src = imageUrl;
+            }
+    
+            function closeModal() {
+                let modal = document.getElementById("modal");
+    
+                modal.style.display = "none";
+            }
+    
+            AOS.init();
+        </script>
+    </body>
+</html>

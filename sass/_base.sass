@@ -1,0 +1,268 @@
+@use "variables"
+@use "mixins"
+@use "typography"
+
+// Componentes
+
+html
+  scroll-behavior: smooth
+
+header
+  font-family: typography.$font__title
+
+body
+  font-family: typography.$font__main
+  color: variables.$color__text
+h1
+  color: variables.$color__main
+  font-family: typography.$font__title
+  text-transform: uppercase
+
+h4
+  color: variables.$color__main
+  font-family: typography.$font__title
+  text-transform: uppercase
+  font-weight: 400
+
+a
+  text-decoration: none
+  color: variables.$color__main
+
+.title-color
+  color: variables.$color__main
+
+.title-grotesk
+  font-family: typography.$font__title
+  font-size: variables.$gap__m
+
+// noticia cuerpo //
+.report
+  margin-inline: auto
+  max-width: 62rem
+  padding-inline: 1rem
+  padding-block: 1rem
+  &__image
+    border-radius: 16px
+// noticia cuerpo //
+
+.container
+  margin-inline: auto
+  max-width: 62rem
+  padding-inline: 1rem
+  padding-block: 1rem
+
+.container-noticia
+  margin-inline: auto
+  max-width: 28rem
+  padding-inline: 1rem
+  padding-block: 1rem
+
+.container-header
+  margin-inline: auto
+  max-width: 98%
+  padding-inline: 1rem
+  padding-block: 1rem
+
+.news-item__cover
+  border-radius: 16px
+
+.container-footer
+  max-width: 62rem
+
+.container__video
+  display: table-cell
+  width: 64rem
+  height: 28rem
+
+.container__gris
+  max-width: 62rem
+  margin-inline: auto
+  margin-block: variables.$gap__s
+  padding-inline: variables.$gap__s
+  padding-block: variables.$gap__s
+  background-color: #DFDFDF
+  border-radius: 16px
+
+.container__background
+  background-image: url("img/fichas/cabecera.webp")
+  width: 100%
+  max-height: 600px
+  background-size: cover
+  background-position: center
+  position: relative
+  z-index: -1
+
+.image
+  display: block
+  width: 100%
+  object-fit: cover
+  object-position: center
+
+.breadcrumb
+  padding-inline: 2rem
+  list-style: none
+  display: flex
+  justify-content: space-between
+  gap: variables.$gap__m
+  align-items: center
+  &__item
+    display: inline
+    align-self: center
+  &__link
+    text-decoration: none
+    box-sizing: border-box
+    padding-inline: 4px
+    &:not(.button)
+      color: variables.$color__text
+      @include mixins.hover
+        color: variables.$color__main
+    &--active
+      font-weight: bold
+
+.headboard
+  display: flex
+  align-items: center
+  margin-inline: auto
+  max-width: 62rem
+  font-family: typography.$font__title
+  font-size: variables.$gap__m
+  text-transform: uppercase
+
+.title__orange
+  display: flex
+  align-items: center
+  margin-inline: auto
+  max-width: 62rem
+  font-family: typography.$font__title
+  font-size: variables.$gap__m
+  text-transform: uppercase
+
+.headboard__decoration--left
+  width: 1px
+  height: 14px
+  background-color: #EA5B0C
+  border-radius: 10px
+  margin-right: 12px
+  padding: 4px
+
+.headboard__decoration--right
+  flex-grow: 1
+  height: 0.02rem
+  background-color: #EA5B0C
+  border-radius: 10px
+  margin-left: 12px
+  padding: 4px
+
+.last__decoration
+  width: 100%
+  padding-bottom: variables.$gap__m
+  border-bottom: 4px solid #64646450
+  border-radius: 10px 10px 0 0
+
+.last__decoration-xl
+  width: 100%
+  margin-block: variables.$gap__xl
+  border-bottom: 4px solid #64646450
+  border-radius: 10px 10px 0 0
+
+.ul-reset
+  display: flex
+  flex-wrap: wrap
+  list-style: none
+  padding: 0
+
+.link
+  display: inline-block
+  color: inherit
+  text-decoration: none
+
+.button
+  display: inline-block
+  box-sizing: border-box
+  padding: variables.$gap__s
+  min-width: variables.$gap__l
+  width: max-content
+  text-decoration: none
+  background-color: variables.$color__main
+  color: variables.$color__white
+  border-radius: 12px
+  transition: 0.3s
+  &:hover
+    scale: 103%
+    font-weight: bold
+    background-color: variables.$color__main-hover
+
+.boton-morado-noticias
+  color: variables.$color__main
+  font-size: 18px
+  font-weight: bold
+  border: none
+  border-radius: 20px
+  padding: 6px 10px
+  cursor: pointer
+  margin: 36px auto
+  display: block
+
+.button-simple
+  box-sizing: border-box
+  padding: variables.$gap__s
+  min-width: variables.$gap__l
+  width: max-content
+  text-decoration: none
+  font-weight: bold
+  background-color: variables.$color__main
+  color: variables.$color__white
+  border-radius: 16px
+  align-content: center
+
+.container-button
+  display: flex
+  text-decoration: none
+  align-items: center
+  align-content: center
+  margin-inline: auto
+  max-width: 62rem
+  padding-inline: 1rem
+
+  @include mixins.hover()
+
+.hidden
+  display: none
+
+// ANCLA STICKY TOP //
+
+.scroll-to-top
+
+.anchor
+  position: fixed
+  bottom: 20px
+  right: 20px
+  z-index: 999
+  text-decoration: none
+
+.square
+  width: 50px
+  height: 50px
+  background-color: variables.$color__main
+  border-radius: 10px
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  animation: jump 2s infinite
+
+@keyframes jump
+  0%, 100%
+    transform: translateY(0)
+
+  50%
+    transform: translateY(-12px)
+
+.arrow
+  width: 0
+  height: 0
+  border-style: solid
+  border-width: 0 10px 14px 10px
+  border-color: transparent transparent #fff transparent
+
+// FIN ANCLA STICKY TOP //

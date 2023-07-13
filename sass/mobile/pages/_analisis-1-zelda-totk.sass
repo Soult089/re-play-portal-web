@@ -1,0 +1,85 @@
+@use "variables"
+@use "mixins"
+
+.item-ancla
+  list-style-type: none
+
+.decoration-margin
+  margin-block: 3rem
+  width: 60%
+  margin-inline: auto
+
+.ancla-analisis
+  color: variables.$color__main
+  padding-block: 0.9rem
+
+.headboard-analisis
+  text-transform: capitalize
+  margin-top: 3rem
+
+.span-ancla
+  margin-top: 10rem
+
+.analisis__image
+  max-width: 100%
+
+// TÍTULO PROGRESO
+.puntuacion-title
+  font-size: variables.$gap__m
+  font-weight: bold
+  text-align: center
+
+// BARRA PROGRESO HORIZONTAL //
+
+.progress
+  height: 1rem
+  width: 14rem
+  border-radius: 12px
+  background-color: #DFDFDF
+  margin: 2rem 2rem 2rem 2rem
+
+.progress-bar-horizontal
+  height: 100%
+  background: variables.$color__main
+  display: inline-block
+  align-items: center
+  border-radius: 12px
+
+// BARRA PROGRESO CIRCULAR
+.progress-bar-zelda
+  margin: 2rem
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 230px
+  height: 230px
+  border-radius: 50%
+  background: radial-gradient(closest-side, #f2f2f2 79%, transparent 80% 100%), conic-gradient(limegreen 91%, transparent 0)
+  grid-area: circle
+
+.progress-bar-zelda::before
+  content: "97" //numero que aparece de %//
+  font-size: variables.$gap__header
+
+
+.valoracion__title
+  display: inline-flex
+
+.valoracion__dot
+  margin-right: variables.$gap__xs
+
+.triangulo-positivo
+  width: 1px
+  height: 1px
+  margin-right: variables.$gap__xs
+  border-left: 10px solid transparent
+  border-right: 10px solid transparent
+  border-bottom: 15px solid variables.$color__positivo
+
+.triangulo-negativo
+  width: 1px
+  height: 1px
+  margin-right: variables.$gap__xs
+  border-left: 10px solid transparent
+  border-right: 10px solid transparent
+  border-top: 15px solid variables.$color__negativo

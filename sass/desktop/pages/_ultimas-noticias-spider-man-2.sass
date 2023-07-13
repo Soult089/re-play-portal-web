@@ -1,0 +1,68 @@
+@use "variables"
+@use "mixins"
+@use "typography"
+
+.imagenes-grid
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-gap: 10px
+
+.imagenes-item img
+  width: 100%
+  height: auto
+  display: block
+  transition: transform 0.3s ease-in-out
+  border-radius: 16px
+  &:hover
+    transform: scale(1.03)
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2)
+
+.report__text
+  margin-bottom: variables.$gap__xl
+
+.modal
+  display: none
+  position: fixed
+  z-index: 9999
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.7)
+  overflow: hidden
+
+.modal img
+  display: block
+  margin: auto
+  padding: 48px
+  max-width: 85%
+  max-height: 85%
+  border-radius: 10px 10px 0 0
+
+.close
+  position: absolute
+  top: 15px
+  right: 40px
+  color: variables.$color__enfasis
+  font-size: 40px
+  font-weight: bold
+  cursor: pointer
+  transition: 0.3s
+  &:hover
+    scale: 150%
+
+.boton-morado
+  background-color: variables.$color__main
+  color: variables.$color__white
+  border: none
+  border-radius: 20px
+  padding: 12px 24px
+  cursor: pointer
+  margin: 36px auto
+  text-transform: uppercase
+  display: block
+  transition: 0.1s ease-in-out
+  &:hover
+    background-color: variables.$color__main-hover
+    transform: scale(1.03)
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5)

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Analisis: LOTR: Gollum</title>
+        <link
+                rel="icon"
+                type="image/png"
+                href="/img/meta-icons/favicon32redondo.png"
+        >
+        <link
+                rel="apple-touch-icon"
+                href="/img/meta-icons/touch-icon-iphone.png"
+        >
+        <link
+                rel="apple-touch-icon"
+                sizes="152x152"
+                href="/img/meta-icons/apple-touch-icon/touch-icon-ipad.png"
+        >
+        <link
+                rel="apple-touch-icon"
+                sizes="180x180"
+                href="/img/meta-icons/apple-touch-icon/touch-icon-iphone-retina.png"
+        >
+        <link
+                rel="apple-touch-icon"
+                sizes="167x167"
+                href="/img/meta-icons/apple-touch-icon/touch-icon-ipad-retina.png"
+        >
+        <meta
+                name="theme-color"
+                content="#8250E8"
+        >
+        <meta
+                name="theme-color"
+                content="#8250E8"
+                media="(prefers-color-scheme: light)"
+        >
+        <meta
+                name="theme-color"
+                content="#8250E8"
+                media="(prefers-color-scheme: dark)"
+        >
+        <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+        >
+        <meta
+                name="author"
+                content="David Garzón"
+        >
+        <meta
+                name="keywords"
+                content="html, css, javascript, videojuegos, gaming, noticias"
+        >
+        <meta
+                name="description"
+                content="Portal de noticias sobre videojuegos actuales"
+        >
+        <meta
+                property="og:image"
+                content="img/screenshot.png"
+        >
+        <meta
+                property="og:title"
+                content="Re-play"
+        >
+        <meta
+                property="og:type"
+                content="website"
+        >
+        <meta
+                property="og:url"
+                content=""
+        >
+        <meta
+                name="twitter:card"
+                content="summary"
+        >
+        <meta
+                name="twitter:site"
+                content="@Replay_spain"
+        >
+        <meta
+                name="twitter:creator"
+                content="@Replay_spain"
+        >
+        <meta
+                property="og:image:secure_url"
+                content="https://..."
+        >
+        <meta
+                property="og:image:type"
+                content="image/jpeg"
+        >
+        <meta
+                property="og:image:width"
+                content="400"
+        >
+        <meta
+                property="og:image:height"
+                content="300"
+        >
+        <meta
+                property="og:image:alt"
+                content=""
+        >
+        <!-- Fuentes importadas -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+        <!-- Fuentes importadas -->
+        
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+        <link rel="stylesheet" href="sass/_typography.sass">
+        
+        <!-- Carrousel swiperJS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <!-- Fin Carrousel swiperJS -->
+        <!-- ALPINEJS -->
+        <script src="https://unpkg.com/alpinejs" defer></script>
+        <!-- End ALPINEJS -->
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- End AOS -->
+    </head>
+    <body>
+        <header class="header" x-data="{ open: false }">
+            <div class="container">
+                <a class="header__brand-link" href="index.html">
+                    <img class="image header__brand header__brand--mobile" src="img/header-responsive/logo-xs.svg" alt="logo">
+                    <img class="image header__brand header__brand--desktop" src="img/header-responsive/logo-desktop.webp" alt="logo">
+                </a>
+                <nav class="nav" :class="open ? 'nav--show' : ''">
+                    <ul class="nav__ul">
+                        <li class="nav__item">
+                            <a href="noticias-main.html" class="link nav__link">Noticias</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="link nav__link link__active">Análisis</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="guias-main.html" class="link nav__link">Guías</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="juegos-main.html" class="link nav__link">Juegos</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="button-header header__button" aria-hidden="true" @click="open = !open">
+                    <img class="image"
+                         alt="boton"
+                         :src="open ? 'img/header-responsive/close.svg' : 'img/header-responsive/open.svg'">
+                </button>
+            </div>
+        </header>
+        <main>
+            <div class="scroll-to-top">
+                <a href="#top" class="anchor">
+                    <div class="square">
+                        <span class="arrow"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="container">
+                <div class="headboard">
+                    <div class="headboard__decoration--left"></div>
+                    <h2 class="headboard__title">Análisis</h2>
+                    <div class="headboard__decoration--right"></div>
+                </div>
+                <section class="report">
+                    <article class="container">
+                        <h1 class="report__title">Análisis The Lord of the Rings: Gollum, un inefable viaje por la Tierra Media de Tolkien</h1>
+                        <img data-aos="fade-up" class="image report__image" src="img/analisis/3-LOTR-gollum/gollum-portada.png" alt="#">
+                        <h2 class="report__subtitle">La espera de The Lord of the Rings: Gollum ha sido tortuosa y complicada, tanto o más que el atribulado viaje de su protagonista.</h2>
+                        <div class="last__decoration decoration-margin"></div>
+                        <p class="report__text">
+                            Tras una infinidad de retrasos y problemas en el desarrollo, la versión de la Tierra Media por parte de Daedalic Entertainment y Nacon llega a consolas y PC con muchísimas más sombras que luces con un videojuego realmente pobre en casi todos sus apartados.
+                        </p>
+                        <p class="report__text">
+                            Este título, considerado el peor valorado de lo que llevamos de 2023, es un videojuego de aventuras y sigilo que no hace justicia a la enorme y alargada sombra de El Señor de los Anillos y su legado en la cultura popular, pese a que se esfuerza en contarnos una interesante historia sobre Sméagol y su inherente atracción sobre el Anillo Único, afianzándose con inteligencia en los escritos y el Legendarium de J.R.R. Tolkien.
+                        </p>
+                        <p class="report__text">
+                            Que no se nos malinterprete. Este maltrecho y corrompido hobbit quizás no sea el personaje más querido de la mitología de Tolkien, pero sí creemos que se merece un lugar propio dentro del Legendarium del Profesor, ya que hablamos de una figura única, que fue cambiando conforme se escribía El Señor de los Anillos y encontrando su sitio dentro de la Guerra del Anillo.
+                        </p>
+                        <p class="report__text">
+                            Tras sopesarlo mucho, Tolkien decidió dotarle de más protagonismo del que tuvo en Acertijos en la oscuridad, el capítulo de El Hobbit en el que aparecía por primera vez, haciéndolo vital dentro del destino de la obra en su conjunto y del eje sobre el que pivotaría la Eucatástrofe acaecida en el Monte del Destino ante los ojos de Frodo Bolsón y Sam Gamyi.
+                        </p>
+                        <div class="last__decoration decoration-margin"></div>
+                        <section class="report__article">
+                            <div class="headboard">
+                                <div class="headboard__decoration--left"></div>
+                                <h2 class="headboard__title">El análisis de El Señor de los Anillos: Gollum de HobbyConsolas:</h2>
+                                <div class="headboard__decoration--right"></div>
+                            </div>
+                            <ul class="ancla-ul">
+                                <li data-aos="fade-up" class="item-ancla">
+                                    <a class="link ancla-analisis" href="#1">El gameplay de El Señor de los Anillos: Gollum</a>
+                                </li>
+                                <li data-aos="fade-up" class="item-ancla" >
+                                    <a class="link ancla-analisis" href="#2">La historia de El Señor de los Anillos: Gollum</a>
+                                </li>
+                                <li data-aos="fade-up" class="item-ancla">
+                                    <a class="link ancla-analisis" href="#3">Nivel de dificultad de El Señor de los Anillos: Gollum</a>
+                                </li>
+                                <li data-aos="fade-up" class="item-ancla">
+                                    <a class="link ancla-analisis" href="#4">¿Cuántas horas de juego dura El Señor de los Anillos: Gollum?</a>
+                                </li>
+                                <li data-aos="fade-up" class="item-ancla">
+                                    <a class="link ancla-analisis" href="#5">Gráficos y sonido de El Señor de los Anillos: Gollum</a>
+                                </li>
+                                <li data-aos="fade-up" class="item-ancla">
+                                    <a class="link ancla-analisis" href="#6">Cuánto cuesta El Señor de los Anillos: Gollum y dónde puedes jugarlo</a>
+                                </li>
+                                <li data-aos="fade-up" class="item-ancla">
+                                    <a class="link ancla-analisis" href="#7">La opinión de Re-play de El Señor de los Anillos: Gollum</a>
+                                </li>
+                                <span class="span-ancla" id="1"></span>
+                                <li data-aos="fade-up" class="item-ancla">
+                                    <a class="link ancla-analisis" href="#8">Nota: lo mejor y lo peor de El Señor de los Anillos: Gollum</a>
+                                </li>
+                            </ul>
+                            <article class="punto-analisis">
+                                <div class="headboard headboard-analisis">
+                                    <div class="headboard__decoration--left"></div>
+                                    <h2 class="headboard__title">Jugabilidad y gameplay de El Señor de los Anillos: Gollum"</h2>
+                                    <div class="headboard__decoration--right"></div>
+                                </div>
+                                <p class="report__text">
+                                    La jugabilidad de El Señor de los Anillos: Gollum se divide básicamente en dos partes. Por un lado, zonas de plataformas, de esas de "agarrarse a salientes amarillos" tan típicas de los juegos tipo Uncharted. Son las partes más habituales del juego: constantemente nos pedirán que escalemos torres y cuevas o crucemos a través de mecanismos móviles de toda clase.
+                                </p>
+                                <p class="report__text">
+                                    Al principio son disfrutables, pero pronto se hacen demasiado repetitivas. Como Gollum se agarra automáticamente a todos los bordes, no tienen mayor dificultad que buscar por el escenario los "bordes amarillos", enredaderas, telarañas (si sufres aracnofobia, este no es tu juego) o paredes rugosas fácilmente identificables...
+                                </p>
+                                
+                                <p class="report__text">
+                                    ... y pelearse con las no demasiado graves pero sí frecuentes torpezas del control y cámara: a veces Gollum no saltará de un borde a otro en el ángulo que deseamos, o la cámara se colocará en posiciones raras bloqueando la visibilidad.
+                                </p>
+                                <img data-aos="fade-up" class="image report__image" src="img/analisis/3-LOTR-gollum/gollum-1.png" alt="#">
+                                <p class="report__text">
+                                    La otra mitad del juego son las secciones de sigilo: esconderse en las sombras, avanzar lentamente o lanzar piedras a los guardias para despistarlos y que te dejen pasar. No hay tantas como secciones de saltos y escalada, y aunque deberían ser las mejores partes del juego, no funcionan como deberían. Gran parte de la culpa la tiene la terrible IA de los enemigos y el simplón diseño de niveles. Los guardias patrullan sin mucho entusiasmo por caminos prefijados, y no te será nada difícil pasar junto a ellos agazapado sin que te vean ni te escuchen, aunque estés a un metro.
+                                </p>
+                                <p class="report__text">
+                                    Otra opción es lanzarles piedras para hacer que se muevan de su posición, pero esta estrategia, que debería usarse muy a menudo, está limitada artificialmente a situaciones muy concretas: cuando haya objetos metálicos cerca, como campanas (resaltadas al usar los "sentidos de Gollum"), podrás tirarles piedras para hacer ruido y que se muevan a inspeccionarlo.
+                                </p>
+                                <p class="report__text">
+                                    Si, por el contrario, lanzas una piedra al suelo cerca del guardia, por lo general ni se inmutará: mirará en esa dirección pero no se moverá, por lo que la estrategia te será inútil. Las piedras es el único "objeto" que puede usar Gollum en todo el juego, y aun así el juego ni siquiera te deja usarla como quieras, lo que acentúa aún más lo encorsetado y limitado que es el sigilo en este juego. Apenas hay espacio para la estrategia o experimentación.
+                                </p>
+                                <span class="span-ancla" id="2"></span>
+                                <p class="report__text">
+                                    Si bien es posible superar la mayoría de las secciones de sigilo planificando cuidadosamente tu ruta saltando de matorral en matorral, el juego no te penalizará mucho si cometes un error o directamente vas a lo loco, haciendo que los enemigos te persigan corriendo en círculo para que te despejen el camino, sin que ello suponga alertar a los enemigos de la siguiente sala. Siempre, claro, que no "choques" con el radio de acción de los guardias (no verás a los guardias capturando a Gollum, simplemente habrá un fundido a negro si entras en el hitbox del guardia y luego una animación prefijada del guardia capturando a Gollum).
+                                </p>
+                            </article>
+                            <article class="punto-analisis">
+                                <div class="headboard headboard-analisis">
+                                    <div class="headboard__decoration--left"></div>
+                                    <h2 class="headboard__title">La historia de El Señor de los Anillos: Gollum</h2>
+                                    <div class="headboard__decoration--right"></div>
+                                </div>
+                                <p class="report__text">
+                                    Todo lo que os hemos contado en el punto anterior ya os debería formar una imagen mental de la clase de juego que es Gollum: un juego muy anticuado en lo jugable, tirando de tópicos que ya parecían desfasados en la época de PS3, como los niveles de plataformas y escalada agarrados a bordes "magnéticos" y zonas de sigilo con guardias moviéndose en patrones claramente "escriptados". Ese diseño de juego tan obsoleto no solo se nota en la jugabilidad, también en los gráficos. Para no hacer demasiada mella, no nos vamos a andar con rodeos: los gráficos son muy malos, no parecen propios de un juego de la generación de PS5 y Xbox Series X, y francamente tampoco de la generación de PS4 y Xbox One.
+                                </p>
+                                <p class="report__text">
+                                    Aunque el modelo de Gollum es expresivo y está bien animado, el resto de los personajes son muy deficientes. Los escenarios también están llenos de texturas "poco hechas" o que se repiten mucho y una iluminación muy plana, que no logra transmitir la sensación de estar en las angostas cuevas de Mordor. La banda sonora tampoco es para tirar cohetes, aunque sí hay que destacar al actor de voz de Gollum/Sméagol, siguiendo la estela creada por Andy Serkis. Por otro lado, el juego tiene un doblaje en élfico... pero debido a las dificultades de entrenar a los actores en este idioma, es exclusivo de la edición deluxe.
+                                </p>
+                                <p class="report__text">
+                                    Pese a todo, consideramos los gráficos un problema menor, teniendo en cuenta que se trata de un juego de un estudio mediano (con 90 empleados, seguramente divididos en muchos proyectos) y que claramente les ha venido grande (el juego fue anunciado para 2021, luego fechado para septiembre de 2022, y finalmente sale en 2023). Dicho esto, Gollum es un juego que no entra por los ojos pero que desafortunadamente tampoco engancha a los mandos, por todas esas limitaciones en la jugabilidad descritas antes, anclado a un esquema de plataformas y sigilo muy anticuado.
+                                </p>
+                                <p class="report__text">
+                                    Son muchos detalles los que dan la sensación de que Gollum sale como un juego inacabado, pese a los ocho meses de trabajo que han tenido tras el último retraso.
+                                </p>
+                                <img data-aos="fade-up" class="image report__image" src="img/analisis/3-LOTR-gollum/gollum-xl-1.png" alt="#">
+                            </article>
+                            <span class="span-ancla" id="3"></span>
+                            <article class="punto-analisis">
+                                <div class="headboard headboard-analisis">
+                                    <div class="headboard__decoration--left"></div>
+                                    <h2 class="headboard__title">¿Es difícil el juego de Gollum?</h2>
+                                    <div class="headboard__decoration--right"></div>
+                                </div>
+                                <p class="report__text">
+                                    El Señor de los Anillos: Gollum no es un juego difícil, pero puede llegar a frustrar en algunos momentos. Las zonas de plataformas no son difíciles, ya que Gollum se agarrará automáticamente a los bordes, y solamente hay un camino a seguir (que además se resaltará si pulsas el gatillo izquierdo para ver los "sentidos de Gollum"). Pero a veces los controles no responden como deberían, sobre todo cuando estás agarrado a una pared y quieres saltar a un borde cercano, mientras que la cámara algunas veces se coloca de formas que bloquean la visibilidad.
+                                </p>
+                                <p class="report__text">
+                                    Nada grave, porque hay checkpoints continuos, pero habrá muchos momentos donde sientas que te has caído por culpa del juego...
+                                    
+                                    Por otro lado, las partes de sigilo no tienen mucha complejidad y se pueden solventar fácilmente incluso si vas "a lo loco" y consigues que no te pillen. Solamente algunos puzles más obtusos te pueden complicar el camino: acuérdate de peinar bien la zona (¡y no te olvides de mirar arriba!).
+                                </p>
+                                <p class="report__text">
+                                    Tiene sentido a la hora de darle una continuidad, pero cuando los cofres más raros del juego nos recompensan con los atuendos que en Breath of the Wild se obtenían escaneando amiibo, se siente menos como continuidad y más como una forma de reaprovechar el contenido. Puede que veamos una atalaya en la lejanía y al acercarnos nos topemos con una posta. En la posta nos encargan una nueva misión secundaria (que resulta muy llamativa) y escuchamos rumores sobre un misterio que se ha divisado al sur de allí. Antes de irnos de la posta nos topamos con un pozo... y cuando salimos de explorar el pozo vemos un santuario a unos metros de distancia...
+                                </p>
+                                <p class="report__text">
+                                    El diseño de este segundo mapa, compuesto por islas flotantes, es completamente diferente. En lugar de tener que sortear un río o decidir si escalamos una montaña o la bordeamos, debemos descubrir cómo alcanzar la siguiente isla aprovechando los poderes de Link y los artilugios zonnan a nuestra disposición, lo que hace que la exploración sea un puzle en sí mismo. Visualizadlo de esta manera: en lugar de un mundo abierto en las nubes, lo que presenta Tears of the Kingdom son niveles flotantes, con un recorrido más marcado pero que sigue ofreciendo un gran nivel de libertad y momentos de creatividad. Al recorrerlos, es inevitable pensar que para diseñarlos han tomado algo de inspiración de cierto fontanero.
+                                </p>
+                                <span class="span-ancla" id="4"></span>
+                                <p class="report__text">
+                                    Pero ahora viene lo mejor: al mostrar novedades sobre Tears of the Kingdom, Nintendo ha estado en todo momento señalando al cielo... cuando en realidad, la gran sorpresa se encuentra bajo tierra. Nos encantaría hablar en profundidad sobre esto, pero es una de esas cosas que creemos que merece la pena descubrir y experimentar por vosotros mismos.  Lo único que vamos a decir es que en Tears of the Kingdom hay, en esencia, tres mapas diferentes. Y que este tercero es bastante más abierto y extenso que el cielo, que es el más sorprendente y que también tiene un diseño que rompe radicalmente con los otros dos.
+                                </p>
+                            </article>
+                            <article class="punto-analisis">
+                                <div class="headboard headboard-analisis">
+                                    <div class="headboard__decoration--left"></div>
+                                    <h2 class="headboard__title">¿Cuántas horas dura El Señor de los Anillos Gollum?</h2>
+                                    <div class="headboard__decoration--right"></div>
+                                </div>
+                                <p class="report__text">
+                                    El Señor de los Anillos: Gollum es un juego completamente lineal. Algunos niveles son más amplios y se dejan explorar un poco, pero no encontrarás mucho por hacer en ellos, ni misiones secundarias ni nada de eso, solamente buscar una treintena coleccionables (sin ninguna utilidad). Completar los 10 capítulos te llevará aproximadamente entre 10 y 15 horas, dependiendo solo de si te atascas en alguna zona de sigilo o algún puzzle.
+                                </p>
+                                
+                                <span class="span-ancla" id="5"></span>
+                            </article>
+                            <div class="punto-analisis">
+                                <div class="headboard headboard-analisis">
+                                    <div class="headboard__decoration--left"></div>
+                                    <h2 class="headboard__title">Precio y plataformas disponibles</h2>
+                                    <div class="headboard__decoration--right"></div>
+                                </div>
+                                <p class="report__text">
+                                    El Señor de los Anillos Gollum sale a la venta el 25 de mayo de 2023 en versiones para <strong>PS5, PS4, Xbox Series X|S, Xbox One y PC.</strong>
+                                </p>
+                                <p class="report__text">
+                                    La Standard Edition cuesta 59,99 euros en PS5, PS4 y Xbox en formato físico y digital (Microsoft Store, PS Store) y cuesta 49,99 euros en PC (Steam, Epic Games Store)
+                                </p>
+                                <p class="report__text">
+                                    Por otro lado, hay una edición especial llamada <strong>"Precious Edition"</strong> o simplemente <strong>"Deluxe Edition"</strong> que incluye el juego, una colección de arte conceptual, un comendio de la historia, banda sonora original y doblaje en élfico.</p>
+                                <p class="report__text">
+                                    La Deluxe Edition cuesta 69,99 euros en PS5, PS4 y Xbox (solo formato digital), mientras que La Deluxe Edition cuesta 59,99 euros en PC (Steam y Epic Games Store)
+                                </p>
+                                <p class="report__text">
+                                    Si juegas en Nintendo Switch, tendrás que esperar: una versión para Nintendo Switch está en desarrollo, pero no saldrá hasta más adelante en 2023.
+                                </p>
+                                <span class="span-ancla" id="6"></span>
+                                <img data-aos="fade-up" class="image report__image" src="img/analisis/3-LOTR-gollum/gollum-xl-2.png" alt="#">
+                            </div>
+                            <article class="punto-analisis">
+                                <div class="headboard headboard-analisis">
+                                    <div class="headboard__decoration--left"></div>
+                                    <h2 class="headboard__title">El Señor de los Anillos Gollum, un juego de otra Edad</h2>
+                                    <div class="headboard__decoration--right"></div>
+                                </div>
+                                <p class="report__text">
+                                    Es una pena que El Señor de los Anillos: Gollum haya resultado ser un juego tan decepcionante. Se nota la ambición de Daedalic en crear una aventura para un solo jugador muy potente tanto en lo jugable como en la historia, al aprovechar los puntos fuertes del personaje Gollum en secciones de plataformas y sigilo, y con esa doble personalidad con <strong>Sméagol</strong>. Un juego de aventura (con nada de acción, eso sí) para un jugador que además viene sin relleno ni distracciones, algo que ya de por sí es digno de admirar.
+                                </p>
+                                <p class="report__text">
+                                    Pero el desafío era demasiado grande para un equipo que no estaba a la altura de un juego de estas características, y que, estrictamente hablando, se puede decir que sí ha cumplido en todos sus apartados (plataformas, sigilo y narrativa), pero con unos niveles de calidad muy bajos en los tres aspectos, particularmente en la jugabilidad, impropia de un juego de 2023. Hoy por hoy es difícil de recomendar a nadie. No es un fracaso absoluto, porque tiene algunos momentos disfrutables, incluso las secciones de plataformas molan antes de volverse repetitivas. Pero el único futuro que le vemos a Gollum es que, en uno años, un grupo de aficionados de Tolkien o de nostálgicos por los juegos con licencias de películas lo conviertan en un pequeño juego de culto.
+                                </p>
+                                <span class="span-ancla" id="7"></span>
+                                <p class="report__text">
+                                    La mera existencia de un juego así ya parecía un anacronismo, un juego salido de la época de PS2, cuando no paraban de hacerse juegos basados en películas, incluso ambiciosos spin-offs que iban más allá de lo que se veía en el cine (como Enter the Matrix o el propio El Señor de los Anillos: La Tercera Edad). En realidad, no es muy diferente a otras cosas que ha lanzado este publisher francés, Nacon (en 2019 lanzaron un shooter basado en Terminator, y su siguiente "doble A" será un juego de RoboCop) o a lo que hace el también francés Microids y su ristra de juegos basados en tebeos como Astérix, Los Pitufos, Tintín, el Inspector Gadget...
+                                </p>
+                                <p class="report__text">
+                                    Y eso es algo que, aunque sea por nostalgia de aquella época, nos encanta. Y de verdad sosteníamos que El Señor de los Anillos: Gollum podría haber sido un juego al menos notable e interesante por méritos propios... pero lamentablemente la calidad no ha acompañado.
+                                </p>
+                            </article>
+                            <section class="puntuacion">
+                                <div class="headboard headboard-analisis">
+                                    <div class="headboard__decoration--left"></div>
+                                    <h2 class="headboard__title">Puntuación</h2>
+                                    <div class="headboard__decoration--right"></div>
+                                </div>
+                                <div class="puntuacion__container">
+                                    <div data-aos="zoom-in-right" class="puntuacion__graficos">
+                                        <p class="puntuacion-title">Gráficos</p>
+                                        <div class="progress">
+                                            <div class="progress-bar-horizontal" style="width:35%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="zoom-in-right" class="puntuacion__jugabilidad">
+                                        <p  class="puntuacion-title">Jugabilidad</p>
+                                        <div class="progress">
+                                            <div class="progress-bar-horizontal" style="width:40%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="zoom-in-right" class="puntuacion__sonido">
+                                        <p class="puntuacion-title">Sonido</p>
+                                        <div class="progress">
+                                            <div class="progress-bar-horizontal" style="width:75%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000"  class="progress-bar">
+                                        <progress value="97" min="0" max="100" style="visibility:hidden;height:0;width:0;">75%</progress>
+                                    </div>
+                                    <div data-aos="zoom-in-left" class="puntuacion__duracion">
+                                        <p class="puntuacion-title">Duración</p>
+                                        <div class="progress">
+                                            <div class="progress-bar-horizontal" style="width:70%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="zoom-in-left" class="puntuacion__un-jugador" >
+                                        <p class="puntuacion-title">Un jugador</p>
+                                        <div class="progress">
+                                            <div class="progress-bar-horizontal" style="width:50%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-aos="zoom-in-left"  class="puntuacion__multijugador">
+                                        <p class="puntuacion-title">Multijugador</p>
+                                        <div class="progress">
+                                            <div class="progress-bar-horizontal" style="width:5%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hgroup data-aos="fade-up" class="valoracion">
+                                    <h4 class="valoracion__title"><span class="valoracion__dot">🟣</span> VALORACIÓN</h4>
+                                    <p>El Señor de los Anillos: Gollum es un juego encomiable por el esfuerzo de Daedalic de narrar una historia totalmente original en la Tierra Media mezclando mecánicas de sigilo y plataformas, pero hace aguas por casi todos los lados: controles imprecisos, IA terrible, narrativa insípida, diseño de niveles anticuado y gráficos de otra generación.</p>
+                                </hgroup>
+                                <hgroup data-aos="fade-up" class="lo-mejor">
+                                    <h4 class="valoracion__title"><div class="triangulo-positivo"></div>LO MEJOR</h4>
+                                    <p class="lo-mejor__text">El diseño de Gollum. Algunos puzzles "zelderos". La ambición de la historia, precuela de El Señor de los Anillos con personajes originales.</p>
+                                </hgroup>
+                                <hgroup data-aos="fade-up" class="lo-peor">
+                                    <h4 class="valoracion__title"><span class="triangulo-negativo"></span>LO PEOR</h4>
+                                    <p class="lo-peor__text">Las secciones de plataformas son muy repetitivas. La IA de los enemigos es terrible. Diseño de juego muy desfasado, y gráficos de otra época.</p>
+                                </hgroup>
+                            </section>
+                        </section>
+                    </article>
+                </section>
+                <section class="section-guia">
+                    <div class="container">
+                        <hgroup class="hgroup_title">
+                            <div class="headboard">
+                                <div class="headboard__decoration--left"></div>
+                                <h2 class="headboard__title">Imágenes</h2>
+                                <div class="headboard__decoration--right"></div>
+                            </div>
+                        </hgroup>
+                        <div class="imagenes-grid">
+                            <div class="imagenes-item">
+                                <img data-aos="zoom-in" data-aos-duration="600" class="img" src="img/analisis/3-LOTR-gollum/gollum-1.png" alt="Imagen 1" onclick="openModal('img/analisis/3-LOTR-gollum/gollum-1.png')">
+                            </div>
+                            <div class="imagenes-item">
+                                <img data-aos="zoom-in" data-aos-delay="200" data-aos-duration="600" class="img" src="img/analisis/3-LOTR-gollum/gollum-2.png" alt="Imagen 2" onclick="openModal('img/analisis/3-LOTR-gollum/gollum-2.png')">
+                            </div>
+                            <div class="imagenes-item">
+                                <img data-aos="zoom-in" data-aos-delay="400" data-aos-duration="600" class="img"  src="img/analisis/3-LOTR-gollum/gollum-3.png" alt="Imagen 3" onclick="openModal('img/analisis/3-LOTR-gollum/gollum-3.png')">
+                            </div>
+                            <div class="imagenes-item">
+                                <img data-aos="zoom-in" data-aos-duration="600" class="img"  src="img/analisis/3-LOTR-gollum/gollum-4.png" alt="Imagen 4" onclick="openModal('img/analisis/3-LOTR-gollum/gollum-4.png')">
+                            </div>
+                            <div class="imagenes-item">
+                                <img data-aos="zoom-in" data-aos-delay="200" data-aos-duration="600" class="img"  src="img/analisis/3-LOTR-gollum/gollum-xl-1.png" alt="Imagen 5" onclick="openModal('img/analisis/3-LOTR-gollum/gollum-xl-1.png')">
+                            </div>
+                            <div class="imagenes-item">
+                                <img data-aos="zoom-in" data-aos-delay="400" data-aos-duration="600" class="img"  src="img/analisis/3-LOTR-gollum/gollum-xl-3.png" alt="Imagen 6" onclick="openModal('img/analisis/3-LOTR-gollum/gollum-xl-3.png')">
+                            </div>
+                        </div>
+                        <button class="boton-morado">Ver todas</button>
+                        
+                        <div id="modal" class="modal">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <img id="modalImage" src="" alt="cerrar imagen">
+                        </div>
+                    </div>
+                </section>
+                <div class="container">
+                    <div class= "headboard">
+                        <div class="headboard__decoration--left"></div>
+                        <h2 class="headboard__title">Más análisis</h2>
+                        <div class="headboard__decoration--right"></div>
+                    </div>
+                </div>
+                <section class="related container__related">
+                    <article data-aos="fade-up" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/1-zelda-totk/1.png" alt="Analisis de Gollum">
+                        <h3 class="last__title">Nintendo revoluciona una de sus sagas más queridas con un juego espectacularmente divertido y ambicioso.</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-1-zelda-totk.html" >Ver noticia completa</a>
+                        <div class="last__decoration"></div>
+                    </article>
+                    <article data-aos="fade-up" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/2-system-shock/1.png" alt="noticia relacionada 2 Dragons dogma">
+                        <h3 class="last__title">Análisis de System Shock Remake, un respetuoso reseteo de los shooters actuales</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-3-system-shock.html" >Ver noticia completa</a>
+                        <div class="last__decoration"></div>
+                    </article>
+                    <article data-aos="fade-up" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/4-disney-speedstorm/disney-speedstorm-3.png" alt="noticia relacionada 3 Dragons dogma">
+                        <h3 class="last__title">Disney: Speedstorm, análisis. El nuevo juego de carreras desenfadado preparado y listo para ser más que competente rival para Mario Kart</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-4-disney-speedstorm.html" >Ver noticia completa</a>
+                        <div class="last__decoration"></div>
+                    </article>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__section1">
+                <nav class="footer__nav">
+                    <a href="index.html" class="footer__link link">Noticias</a>
+                    <div class="footer__decoration" ></div>
+                    <a href="analisis-main.html" class="footer__link link">Análisis</a>
+                    <div class="footer__decoration" ></div>
+                    <a href="guias-main.html" class="footer__link link">Guías</a>
+                    <div class="footer__decoration" ></div>
+                    <a href="juegos-main.html" class="footer__link link">Juegos</a>
+                    <div class="footer__decoration" ></div>
+                </nav>
+            </div>
+            <div class="footer__section2">
+                <div class="footer__logo">
+                    <img src="img/footer-logo.svg/" alt="Logo de la web">
+                </div>
+                <div class="footer__terms">
+                    <a target="_blank" href="condiciones-de-uso.html" class="footer__terms-link link">Condiciones de uso</a>
+                    <a target="_blank" href="aviso-legal.html" class="footer__terms-link link">Política de privacidad</a>
+                    <a target="_blank" href="politica-de-cookies.html" class="footer__terms-link link">Política de cookies</a>
+                    <a target="_blank" href="contacto.html" class="footer__terms-link link">Contacto</a>
+                </div>
+                <div class="footer__social-media">
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100093371010609"><img src="img/social-media/facebook-logo.svg" alt="Facebook"></a>
+                    <a target="_blank" href="https://www.youtube.com/"><img src="img/social-media/youtube-logo.svg" alt="Youtube"></a>
+                    <a target="_blank" href="https://twitter.com/Replay_spain"><img src="img/social-media/twitter-logo.png" alt="twitter"></a>
+                    <a target="_blank" href="https://www.instagram.com/replay_spain/"><img src="img/social-media/instagram-logo.svg" alt="instagram"></a>
+                    <a target="_blank" href="https://www.twitch.tv/"><img src="img/social-media/twitch-logo.svg" alt="twitch"></a>
+                </div>
+            </div>
+            <div class="footer__section3">
+                <p class="footer__copyright">Copyright re-play 2017-2023 - Todos los derechos reservados ©</p>
+            </div>
+        </footer>
+        <script>
+            function openModal(imageUrl) {
+                let modal = document.getElementById("modal");
+                let modalImage = document.getElementById("modalImage");
+    
+                modal.style.display = "block";
+                modalImage.src = imageUrl;
+            }
+    
+            function closeModal() {
+                let modal = document.getElementById("modal");
+    
+                modal.style.display = "none";
+            }
+    
+            AOS.init();
+        </script>
+    </body>
+</html>

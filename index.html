@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Re-play - Tu portal de noticias sobre videojuegos</title>
+        <link
+                rel="icon"
+                type="image/png"
+                href="/img/meta-icons/favicon32redondo.png"
+        >
+        <link
+                rel="apple-touch-icon"
+                href="/img/meta-icons/touch-icon-iphone.png"
+        >
+        <link
+                rel="apple-touch-icon"
+                sizes="152x152"
+                href="/img/meta-icons/apple-touch-icon/touch-icon-ipad.png"
+        >
+        <link
+                rel="apple-touch-icon"
+                sizes="180x180"
+                href="/img/meta-icons/apple-touch-icon/touch-icon-iphone-retina.png"
+        >
+        <link
+                rel="apple-touch-icon"
+                sizes="167x167"
+                href="/img/meta-icons/apple-touch-icon/touch-icon-ipad-retina.png"
+        >
+        <meta
+                name="theme-color"
+                content="#8250E8"
+        >
+        <meta
+                name="theme-color"
+                content="#8250E8"
+                media="(prefers-color-scheme: light)"
+        >
+        <meta
+                name="theme-color"
+                content="#8250E8"
+                media="(prefers-color-scheme: dark)"
+        >
+        <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+        >
+        <meta
+                name="author"
+                content="David Garzón"
+        >
+        <meta
+                name="keywords"
+                content="html, css, javascript, videojuegos, gaming, noticias"
+        >
+        <meta
+                name="description"
+                content="Portal de noticias sobre videojuegos actuales"
+        >
+        <meta
+                property="og:image"
+                content="img/screenshot.png"
+        >
+        <meta
+                property="og:title"
+                content="Re-play"
+        >
+        <meta
+                property="og:type"
+                content="website"
+        >
+        <meta
+                property="og:url"
+                content=""
+        >
+        <meta
+                name="twitter:card"
+                content="summary"
+        >
+        <meta
+                name="twitter:site"
+                content="@Replay_spain"
+        >
+        <meta
+                name="twitter:creator"
+                content="@Replay_spain"
+        >
+        <meta
+                property="og:image:secure_url"
+                content="https://..."
+        >
+        <meta
+                property="og:image:type"
+                content="image/jpeg"
+        >
+        <meta
+                property="og:image:width"
+                content="400"
+        >
+        <meta
+                property="og:image:height"
+                content="300"
+        >
+        <meta
+                property="og:image:alt"
+                content=""
+        >
+        <!-- Fuentes importadas -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+        <!-- Fuentes importadas -->
+
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+        <link rel="stylesheet" href="sass/_typography.sass">
+
+        <!-- Carrousel swiperJS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <!-- Fin Carrousel swiperJS -->
+        <!-- ALPINEJS -->
+        <script src="https://unpkg.com/alpinejs" defer></script>
+        <!-- End ALPINEJS -->
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- End AOS -->
+        <!-- Cookies -->
+        <title>JnjSite.com: Nueva versión del sencillo mensaje de aceptar cookies para tu web</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Cookies -->
+    </head>
+    <body>
+        <header class="header" x-data="{ open: false }">
+            <div class="container">
+                <a class="header__brand-link" href="index.html">
+                    <img class="image header__brand header__brand--mobile" src="img/header-responsive/logo-xs.svg" alt="logo">
+                    <img class="image header__brand header__brand--desktop" src="img/header-responsive/logo-desktop.webp" alt="logo">
+                </a>
+                <nav class="nav" :class="open ? 'nav--show' : ''">
+                    <ul class="nav__ul">
+                        <li class="nav__item">
+                            <a href="noticias-main.html" class="link nav__link">Noticias</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="analisis-main.html" class="link nav__link">Análisis</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="guias-main.html" class="link nav__link">Guías</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="juegos-main.html" class="link nav__link">Juegos</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="button-header header__button" aria-hidden="true" @click="open = !open">
+                    <img class="image"
+                         alt="boton"
+                         :src="open ? 'img/header-responsive/close.svg' : 'img/header-responsive/open.svg'">
+                </button>
+            </div>
+        </header>
+        <main>
+            <div class="scroll-to-top">
+                <a href="#top" class="anchor">
+                    <div class="square">
+                        <span class="arrow"></span>
+                    </div>
+                </a>
+            </div>
+            <span id="#top"></span>
+            <section class="carousel-intro">
+                <div class="swiper swiper__desktop">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <a class="swiper__link" href="noticia-4-space-marine-2.html">
+                                <img class="image swiper__img" alt="foto carrousel con starfield" src="img/carrousel/carrousel-1.png">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="swiper__link" href="noticia-1-dragons-dogma.html">
+                                <img class="image swiper__img" alt="foto carrousel con dragons dogma 2" src="img/carrousel/carrousel-2.png">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="swiper__link" href="analisis-1-zelda-totk.html"><img class="image swiper__img" alt="foto carrousel con zelda" src="img/carrousel/carrousel-3.png"></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="swiper__link" href="analisis-2-lotr-gollum.html"><img class="image swiper__img" alt="foto carrousel con ffXVII" src="img/carrousel/carrousel-4.png"></a>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+                <!-- CARROUSEL DESKTOP FINAL -->
+            </section>
+            <section data-aos="fade-right" class="hero">
+                <div class="container">
+                    <hgroup class="hero__hgroup">
+                        <p>Notícias <span aria-hidden="true">/</span><span class="hero__text-red"> Destacados</span></p>
+                        <h2 class="hero__title">Blizzard detalla el sistema de escalado de nivel de Diablo 4</h2>
+                    </hgroup>
+                        <p class="hero__description"> Los creadores de Diablo 4 explican cómo funciona el escalado de nivel de los enemigos y cómo se comparte el progreso y la experiencia en multijugador.
+                    </p>
+                    <a href="analisis-5-diablo-iv.html" class="hero__link button" >Ver la noticia</a>
+                    <img class="image hero__image" src="img/noticia-hero.png" alt="descripcion">
+                </div>
+            </section>
+            <section class="last">
+                <div class="container">
+                    <hgroup class="hgroup_title">
+                        <div class="headboard">
+                            <div class="headboard__decoration--left"></div>
+                            <h2 class="headboard__title">Ultimas notícias</h2>
+                            <div class="headboard__decoration--right"></div>
+                        </div>
+                    </hgroup>
+                </div>
+                <article data-aos="fade-up" class="container">
+                    <img class="image last__image" src="img/last/last-news-1.png" alt="Spiderman 2">
+                    <h3 class="last__title">El traje negro de Peter Parker en Marvel's Spider-Man 2 divide a los fans</h3>
+                    <p class="last__description">A pesar de que, en general, dejó buenas sensaciones entre los usuarios, en redes sociales y foros de videojuegos podemos encontrar cierta disparidad de opiniones en lo que respecta al nuevo traje simbiótico de Peter Parker, el cual se lució por primera vez en este último vistazo.
+                    </p>
+                    <div class="last__platform">
+                        <img src="img/platform-logos/platform-ps5.png" alt="logo-ps5">
+                    </div>
+                    <a class="boton-morado-noticias last__time link" href="ultimas-noticias-spider-man-2.html" >Ver noticia completa</a>
+                    <div class="last__decoration"></div>
+                </article>
+                <article data-aos="fade-up" class="container">
+                    <img class="image last__image" src="img/last/last-news-2.png" alt="Marathon">
+                    <h3 class="last__title">Marathon, el nuevo shooter de Bungie, estrena su primer vídeo documental</h3>
+                    <p class="last__description">Bungie reveló ayer en el PlayStation Showcase el regreso de Marathon para PlayStation 5, Xbox Series y PC, una de sus licencias veteranas que regresa reinventada en un shooter tipo extracción. El primer vídeo generado por ordenador sólo da idea del estilo gráfico, pero el estudio ha estrenado un primer documental.
+                    </p>
+                    <div class="last__platform">
+                        <img src="img/platform-logos/platform-pc.png" alt="logo-pc">
+                        <img src="img/platform-logos/platform-xbox.png" alt="logo-xbox">
+                        <img src="img/platform-logos/platform-ps5.png" alt="logo-ps5">
+                        <img src="img/platform-logos/platform-ps4.png" alt="logo-ps4">
+                    </div>
+                    <a class="boton-morado-noticias last__time link" href="ultimas-noticias-marathon.html" >Ver noticia completa</a>
+                    <div class="last__decoration"></div>
+                </article>
+                <article data-aos="fade-up" class="container">
+                    <img class="image last__image" src="img/last/last-news-3.png" alt="Neva">
+                    <h3 class="last__title">Neva, lo nuevo de los creadores de Gris, llegará en 2024 y presenta tráiler e imágenes</h3>
+                    <p class="last__description">Devolver Digital y el estudio barcelonés Nomada Studio han anunciado durante el PlayStation Showcase Neva, una nueva aventura cargada de emoción del equipo creador del éxito indie Gris. Os mostramos su tráiler, una secuencia de animación, y las primeras imágenes. Estará disponible en PC, PlayStation 4, Xbox Series y Nintendo Switch en 2024.
+                    </p>
+                    <div class="last__platform">
+                        <img src="img/platform-logos/platform-pc.png" alt="logo-pc">
+                        <img src="img/platform-logos/platform-xbox.png" alt="logo-xbox">
+                        <img src="img/platform-logos/platform-ps5.png" alt="logo-ps5">
+                        <img src="img/platform-logos/platform-ps4.png" alt="logo-ps4">
+                        <img src="img/platform-logos/platform-nintendo.png" alt="logo-nintendo">
+                        
+                    </div>
+                    <a  class="boton-morado-noticias last__time link" href="noticia-3-neva.html" >Ver noticia completa</a>
+                    <div class="last__decoration"></div>
+                </article>
+                <article data-aos="fade-up" class="container">
+                    <img class="image last__image" src="img/last/last-news-4.png" alt="Warhammer 40k: Sapce Marine">
+                    <h3 class="last__title">Warhammer 40,000: Space Marine 2 muestra un
+                        nuevo vistazo a su gameplay</h3>
+                    <p class="last__description">Focus Entertainment y la desarrolladora Saber Interactive han mostrado un nuevo vídeo de Warhammer 40,000: Space Marine 2 con un minuto de gameplay. El título de acción está previsto en PlayStation 5, Xbox Series y PC para 2023, sin una fecha más concreta.
+                    </p>
+                    <div class="last__platform">
+                        <img src="img/platform-logos/platform-pc.png" alt="logo-pc">
+                        <img src="img/platform-logos/platform-xbox.png" alt="logo-xbox">
+                        <img src="img/platform-logos/platform-ps5.png" alt="logo-ps5">
+                    </div>
+                    <a class="boton-morado-noticias last__time link" href="noticia-4-space-marine-2.html" >Ver noticia completa</a>
+                    <div class="last__decoration"></div>
+                </article>
+                <article data-aos="fade-up" class="container">
+                    <img class="image last__image" src="img/last/last-news-5.png" alt="Metal Gear Solid Remaster">
+                    <h3 class="last__title">Konami España confirma edición física de Metal Gear Solid: Master Collection Vol. 1</h3>
+                    <p class="last__description">Metal Gear Solid: Master Collection Vol. 1 tendrá edición física en España, según ha confirmado la propia Konami. No se ha desvelado ni su fecha de lanzamiento ni precio.
+                    </p>
+                    <div class="last__platform">
+                        <img src="img/platform-logos/platform-ps5.png" alt="logo-ps5">
+                    </div>
+                    <a class="boton-morado-noticias last__time link" href="noticia-5-metal-gear.html" >Ver noticia completa</a>
+                    <div class="last__decoration"></div>
+                </article>
+                <article data-aos="fade-up" class="container">
+                    <img class="image last__image" src="img/last/last-news-6.png" alt="Dragons Dogma 2">
+                    <h3 class="last__title">Dragon's Dogma 2 presenta su primer gameplay en PlayStation Showcase</h3>
+                    <p class="last__description">"Itsuno y el equipo de desarrollo de Dragon's Dogma II, incluidos los veteranos de Dragon's Dogma Daigo Ikeno y Kenichi Suzuki, están trabajando arduamente para crear la secuela y están emocionados de compartir más detalles en el futuro", dijo Capcom hace un año sobre la secuela.
+                    </p>
+                    <div class="last__platform">
+                        <img src="img/platform-logos/platform-pc.png" alt="logo-pc">
+                        <img src="img/platform-logos/platform-xbox.png" alt="logo-xbox">
+                        <img src="img/platform-logos/platform-ps5.png" alt="logo-ps5">
+                    </div>
+                    <a class="boton-morado-noticias last__time link" href="noticia-1-dragons-dogma.html" >Ver noticia completa</a>
+                </article>
+            </section>
+            <div class="container">
+                <hgroup class="hgroup_title">
+                    <div class="headboard">
+                        <div class="headboard__decoration--left"></div>
+                        <h2 class="headboard__title">Próximos lanzamientos</h2>
+                        <div class="headboard__decoration--right"></div>
+                    </div>
+                </hgroup>
+            </div>
+            <section class="lanzamientos">
+                <div class="container">
+                    <div class="lanzamientos__list">
+                        <a data-aos="zoom-in" class="lanzamientos__link" href="#">
+                            <img src="img/launch/1.png" alt="final-fantasy-xvi" class="lanzamientos__image" onclick="window.location.href='analisis-zelda-tears-of-the-kingdom.html'">
+                        </a>
+                        <a data-aos="zoom-in" class="lanzamientos__link" href="#">
+                            <img src="img/launch/2.png" alt="aliens-dark-descent" class="lanzamientos__image" onclick="window.location.href='analisis-zelda-tears-of-the-kingdom.html'">
+                        </a>
+                        <a data-aos="zoom-in" class="lanzamientos__link" href="#">
+                            <img src="img/launch/3.png" alt="warhammer-boltgun" class="lanzamientos__image" onclick="window.location.href='analisis-zelda-tears-of-the-kingdom.html'">
+                        </a>
+                        <a data-aos="zoom-in" class="lanzamientos__link" href="#">
+                            <img src="img/launch/4.png" alt="baldurs-gate-iii" class="lanzamientos__image" onclick="window.location.href='analisis-zelda-tears-of-the-kingdom.html'">
+                        </a>
+                        <a data-aos="zoom-in" class="lanzamientos__link" href="#">
+                            <img src="img/launch/5.png" alt="starfield" class="lanzamientos__image hidden" onclick="window.location.href='analisis-zelda-tears-of-the-kingdom.html'">
+                        </a>
+                        <a data-aos="zoom-in" class="lanzamientos__link" href="#">
+                            <img src="img/launch/6.png" alt="fae-farm" class="lanzamientos__image hidden" onclick="window.location.href='analisis-zelda-tears-of-the-kingdom.html'">
+                        </a>
+                        <a data-aos="zoom-in" class="lanzamientos__link" href="">
+                            <img src="img/launch/7.png" alt="assassins-creed-mirage" class="lanzamientos__image hidden" onclick="window.location.href='analisis-zelda-tears-of-the-kingdom.html'">
+                        </a>
+                        <a data-aos="zoom-in" class="lanzamientos__link" href="#">
+                            <img src="img/launch/8.png" alt="spider-man-ii" class="lanzamientos__image hidden" onclick="window.location.href='analisis-zelda-tears-of-the-kingdom.html'">
+                        </a>
+                    </div>
+                    <div class="container-button">
+                        <button class="boton-morado ver-mas-btn">Ver más</button>
+                    </div>
+                </div>
+            </section>
+            <div class="container">
+                <div class= "headboard">
+                    <div class="headboard__decoration--left"></div>
+                    <h2 class="headboard__title">Últimos análisis</h2>
+                    <div class="headboard__decoration--right"></div>
+                </div>
+            </div>
+            <div class="container">
+                <section class="related container__related">
+                    <article data-aos="fade-up" data-aos-delay="200" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/3-LOTR-gollum/gollum-3.png" alt="Analisis de Gollum">
+                        <h3 class="last__title">The Lord of the Rings: Gollum, análisis. Me duele decir esto como fan de Tolkien y de la fantasía, pero es un "quiero y no puedo".</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-2-lotr-gollum.html" >Ver análisis completo</a>
+                    </article>
+                    <article data-aos="fade-up" data-aos-delay="400" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/2-system-shock/1.png" alt="analisis system shock">
+                        <h3 class="last__title">Análisis de System Shock Remake, un respetuoso reseteo de los shooters actuales</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-3-system-shock.html" >Ver análisis completo</a>
+                    </article>
+                    <article data-aos="fade-up" data-aos-delay="600" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/4-disney-speedstorm/disney-speedstorm-3.png" alt="analisis disney speedstorm">
+                        <h3 class="last__title">Disney: Speedstorm, análisis. El nuevo juego de carreras desenfadado preparado y listo para ser más que competente rival para Mario Kart</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-4-disney-speedstorm.html" >Ver análisis completo</a>
+                    </article>
+                </section>
+                <section class="related container__related">
+                    <article data-aos="fade-up" data-aos-delay="200" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/5-aliens-dark-descent/aliens-1.png" alt="Analisis de Aliens_ Dark descent">
+                        <h3 class="last__title">Aliens: Dark Descent, un paseo militar en los infiernos de Lethe.</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-2-lotr-gollum.html" >Ver análisis completo</a>
+                        <div class="last__decoration"></div>
+                    </article>
+                    <article data-aos="fade-up" data-aos-delay="400" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/6-final-fantasy-xvi/1-ffxvi.png" alt="analisis system shock">
+                        <h3 class="last__title">Análisis de Final Fantasy XVI. Tras completar el juego en 45 horas, es el RPG de fantasía más espectacular pero también puede ser la entrega más divisiva de la saga</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-3-system-shock.html" >Ver análisis completo</a>
+                        <div class="last__decoration"></div>
+                    </article>
+                    <article data-aos="fade-up" data-aos-delay="600" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/7-starfield/1.png" alt="analisis disney speedstorm">
+                        <h3 class="last__title">Análisis de Starfield: Las nuevas pistas revelan cómo será la construcción de planetas de Starfield.
+                        </h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-4-disney-speedstorm.html" >Ver análisis completo</a>
+                        <div class="last__decoration"></div>
+                    </article>
+                </section>
+                <section class="related container__related">
+                    <article data-aos="fade-up" data-aos-delay="200" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/0-analisis-variados/layers-of-fear.png" alt="Analisis de Aliens_ Dark descent">
+                        <h3 class="last__title">Es más que un remake, pero menos que un juego nuevo. Análisis del juego de terror que hizo famoso al Bloober Team. Layers of Fear</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-2-lotr-gollum.html" >Ver análisis completo</a>
+                        <div class="last__decoration"></div>
+                    </article>
+                    <article data-aos="fade-up" data-aos-delay="400" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/0-analisis-variados/elder-scrolls-necrom.png" alt="analisis system shock">
+                        <h3 class="last__title">Cuando Lovecraft se cruza con The Elder Scrolls. El RPG de fantasía de Bethesda se expande al reino de la locura. Análisis de TESO Necrom.</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-3-system-shock.html" >Ver análisis completo</a>
+                        <div class="last__decoration"></div>
+                    </article>
+                    <article data-aos="fade-up" data-aos-delay="600" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/0-analisis-variados/sonic.png" alt="analisis disney speedstorm">
+                        <h3 class="last__title">No esperaba recibir un golpe de nostalgia tan grande con esta colección de juegos de Sonic, aunque hay un par de detalles que se podrían mejorar. Análisis de Sonic Origins Plus.
+                        </h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-4-disney-speedstorm.html" >Ver análisis completo</a>
+                        <div class="last__decoration"></div>
+                    </article>
+                </section>
+                <section class="related container__related">
+                    <article data-aos="fade-up" data-aos-delay="200" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/0-analisis-variados/formula-1.png" alt="Analisis de Aliens_ Dark descent">
+                        <h3 class="last__title">F1 23 me ha sorprendido como Aston Martin: te vas a divertir mientras llega la 33 de Fernando Alonso. Análisis.</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-2-lotr-gollum.html" >Ver análisis completo</a>
+                        <div class="last__decoration"></div>
+                    </article>
+                    <article data-aos="fade-up" data-aos-delay="400" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/0-analisis-variados/miasma-chronicles.png" alt="analisis system shock">
+                        <h3 class="last__title">Es posiblemente uno de los juegos más difíciles del año, y también uno de los mejores. Análisis de Miasma Chronicles.</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-3-system-shock.html" >Ver análisis completo</a>
+                        <div class="last__decoration"></div>
+                    </article>
+                    <article data-aos="fade-up" data-aos-delay="600" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/0-analisis-variados/amnesia.png" alt="analisis disney speedstorm">
+                        <h3 class="last__title">Es como si Alien Isolation y Resident Evil hubieran tenido un hijo, y el resultado es aterrador. Análisis de Amnesia The Bunker
+                        </h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-4-disney-speedstorm.html" >Ver análisis completo</a>
+                        <div class="last__decoration"></div>
+                    </article>
+                </section>
+                <section class="related container__related">
+                    <article data-aos="fade-up" data-aos-delay="200" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/5-aliens-dark-descent/aliens-1.png" alt="Analisis de Aliens_ Dark descent">
+                        <h3 class="last__title">Aliens: Dark Descent, un paseo militar en los infiernos de Lethe.</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-2-lotr-gollum.html" >Ver análisis completo</a>
+                        <div class="last__decoration"></div>
+                    </article>
+                    <article data-aos="fade-up" data-aos-delay="400" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/6-final-fantasy-xvi/1-ffxvi.png" alt="analisis system shock">
+                        <h3 class="last__title">Análisis de Final Fantasy XVI. Tras completar el juego en 45 horas, es el RPG de fantasía más espectacular pero también puede ser la entrega más divisiva de la saga</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-3-system-shock.html" >Ver análisis completo</a>
+                        <div class="last__decoration"></div>
+                    </article>
+                    <article data-aos="fade-up" data-aos-delay="600" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/7-starfield/1.png" alt="analisis disney speedstorm">
+                        <h3 class="last__title">Análisis de Starfield: Las nuevas pistas revelan cómo será la construcción de planetas de Starfield.
+                        </h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-4-disney-speedstorm.html" >Ver análisis completo</a>
+                        <div class="last__decoration"></div>
+                    </article>
+                </section>
+                <section class="related container__related">
+                    <article data-aos="fade-up" data-aos-delay="200" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/3-LOTR-gollum/gollum-3.png" alt="Analisis de Gollum">
+                        <h3 class="last__title">The Lord of the Rings: Gollum, análisis. Me duele decir esto como fan de Tolkien y de la fantasía, pero es un "quiero y no puedo".</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-2-lotr-gollum.html" >Ver análisis completo</a>
+                    
+                    </article>
+                    <article data-aos="fade-up" data-aos-delay="400" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/2-system-shock/1.png" alt="analisis system shock">
+                        <h3 class="last__title">Análisis de System Shock Remake, un respetuoso reseteo de los shooters actuales</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-3-system-shock.html" >Ver análisis completo</a>
+                    </article>
+                    <article data-aos="fade-up" data-aos-delay="600" class="container">
+                        <img class="image last__image analisis__image" src="img/analisis/4-disney-speedstorm/disney-speedstorm-3.png" alt="analisis disney speedstorm">
+                        <h3 class="last__title">Disney: Speedstorm, análisis. El nuevo juego de carreras desenfadado preparado y listo para ser más que competente rival para Mario Kart</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-4-disney-speedstorm.html" >Ver análisis completo</a>
+                    </article>
+                </section>
+                <div class="container">
+                    <div data-aos="fade-up" data-aos-delay="300" class= "headboard">
+                        <div class="headboard__decoration--left"></div>
+                        <h2 class="headboard__title">Quizás te pueda interesar</h2>
+                        <div class="headboard__decoration--right"></div>
+                    </div>
+                </div>
+                <section class="related container__related">
+                    <article data-aos="fade-up" data-aos-delay="200" class="container-noticia">
+                        <img class="image last__image analisis__image" src="img/last/last-news-3.png" alt="Analisis de Gollum">
+                        <h3 class="last__title">Neva, lo nuevo de los creadores de Gris, llegará en 2024 y presenta tráiler e imágenes.</h3>
+                        <a class="boton-morado-noticias last__time link" href="analisis-2-lotr-gollum.html" >Ver noticia</a>
+                    </article>
+                    <article data-aos="fade-up" data-aos-delay="400" class="container-noticia">
+                        <img class="image last__image analisis__image" src="img/noticias/1-dragons-dogma/1.png" alt="analisis system shock">
+                        <h3 class="last__title">Dragon's Dogma 2 presenta su primer gameplay en PlayStation Showcase</h3>
+                        <a class="boton-morado-noticias last__time link" href="noticia-1-dragons-dogma.html" >Ver noticia</a>
+                    </article>
+                </section>
+                <section class="related container__related">
+                    <article data-aos="fade-up" data-aos-delay="200" class="container-noticia">
+                        <img class="image last__image analisis__image" src="img/noticias/1-dragons-dogma/related-2.png" alt="trailer dragons dogma 2">
+                        <h3 class="last__title">Neva, lo nuevo de los creadores de Gris, llegará en 2024 y presenta tráiler e imágenes.</h3>
+                        <a class="boton-morado-noticias last__time link" href="noticia-3-neva.html" >Ver noticia</a>
+                    </article>
+                    <article data-aos="fade-up" data-aos-delay="400" class="container-noticia">
+                        <img class="image last__image analisis__image" src="img/noticias/warhammer-space-marine-2/1.png" alt="analisis system shock">
+                        <h3 class="last__title">Warhammer 40,000: Space Marine 2 muestra un nuevo vistazo a su gameplay</h3>
+                        <a class="boton-morado-noticias last__time link" href="noticia-4-space-marine-2.html" >Ver noticia</a>
+                    </article>
+                </section>
+                <section class="related container__related">
+                    <article data-aos="fade-up" data-aos-delay="200" class="container-noticia">
+                        <img class="image last__image analisis__image" src="img/noticias/metal-gear/1.png" alt="trailer dragons dogma 2">
+                        <h3 class="last__title">Konami España confirma edición física de Metal Gear Solid: Master Collection Vol. 1</h3>
+                        <a class="boton-morado-noticias last__time link" href="noticia-5-metal-gear.html" >Ver noticia</a>
+                    </article>
+                    <article data-aos="fade-up" data-aos-delay="400" class="container-noticia">
+                        <img class="image last__image analisis__image" src="img/noticias/1-dragons-dogma/related-2.png" alt="analisis system shock">
+                        <h3 class="last__title">Capcom anuncia Dragon's Dogma 2</h3>
+                        <a class="boton-morado-noticias last__time link" href="noticia-2-dragons-dogma.html" >Ver noticia</a>
+                    </article>
+                </section>
+            </div>
+            <div class="container">
+                <div class="headboard">
+                    <div class="headboard__decoration--left"></div>
+                    <h2 class="headboard__title">más noticias</h2>
+                    <div class="headboard__decoration--right"></div>
+                </div>
+                <section class="news">
+                    <div class="container">
+                        <div class="news__items">
+                            <article data-aos="fade-up" class="news-item">
+                                <a class="link news-item__link" href="#">
+                                    <img class="image news-item__cover" src="img/news/news-1.png" alt="news-1">
+                                    <hgroup class="news-item__hgroup">
+                                        <h3 class="news-item__title title-color">Pokémon GO</h3>
+                                        <p class="news-item__summary">
+                                            Mejores counters contra Regirock oscuro y el nuevo equipo de Giovanni.
+                                        </p>
+                                    </hgroup>
+                                </a>
+                            </article>
+                            <article data-aos="fade-up" class="news-item">
+                                <a class="link news-item__link" href="#">
+                                    <img class="image news-item__cover" src="img/news/news-2.png" alt="news-2">
+                                    <hgroup class="news-item__hgroup">
+                                        <h3 class="news-item__title title-color">
+                                            Star Wars Jedi: Survivor
+                                        </h3>
+                                        <p class="news-item__summary">Se actualiza en consolas y PC para corregir varios errores.
+                                        </p>
+                                    </hgroup>
+                                </a>
+                            </article>
+                            <article data-aos="fade-up" class="news-item">
+                                <a class="link news-item__link" href="#">
+                                    <img class="image news-item__cover" src="img/news/news-3.png" alt="news-3">
+                                    <hgroup class="news-item__hgroup">
+                                        <h3 class="news-item__title title-color">
+                                            Final Fantasy XVI
+                                        </h3>
+                                        <p class="news-item__summary">Obtiene una puntuación casi perfecta en la revista Famitsu.
+                                        </p>
+                                    </hgroup>
+                                </a>
+                            </article>
+                            <article data-aos="fade-up" class="news-item">
+                                <a class="link news-item__link" href="#">
+                                    <img class="image news-item__cover" src="img/news/news-4.png" alt="news-4">
+                                    <hgroup class="news-item__hgroup">
+                                        <h3 class="news-item__title title-color">
+                                            Chrono Trigger
+                                        </h3>
+                                        <p class="news-item__summary">Un fan muestra cómo sería un remake con aspecto HD-2D.
+                                        </p>
+                                    </hgroup>
+                                </a>
+                            </article>
+                            <article data-aos="fade-up" class="news-item">
+                                <a class="link news-item__link" href="#">
+                                    <img class="image news-item__cover" src="img/news/news-5.png" alt="news-5">
+                                    <hgroup class="news-item__hgroup">
+                                        <h3 class="news-item__title title-color">Juegos AAA
+                                        </h3>
+                                        <p class="news-item__summary">¿Por qué es insostenible su modelo tal y como lo conocemos?
+                                        </p>
+                                    </hgroup>
+                                </a>
+                            </article>
+                            <article data-aos="fade-up" class="news-item">
+                                <a class="link news-item__link" href="#">
+                                    <img class="image news-item__cover" src="img/news/news-6.png" alt="news-6">
+                                    <hgroup class="news-item__hgroup">
+                                        <h3 class="news-item__title title-color">Horizon Forbidden West
+                                        </h3>
+                                        <p class="news-item__summary">Burning Shores se actualiza a la v1.26 con varias correcciones.
+                                        </p>
+                                    </hgroup>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__section1">
+                <nav class="footer__nav">
+                    <a href="noticias-main.html" class="footer__link link">Noticias</a>
+                    <div class="footer__decoration" ></div>
+                    <a href="analisis-main.html" class="footer__link link">Análisis</a>
+                    <div class="footer__decoration" ></div>
+                    <a href="guias-main.html" class="footer__link link">Guías</a>
+                    <div class="footer__decoration" ></div>
+                    <a href="juegos-main.html" class="footer__link link">Juegos</a>
+                    <div class="footer__decoration" ></div>
+                </nav>
+            </div>
+            <div class="footer__section2">
+                <div class="footer__logo">
+                    <img src="img/footer-logo.svg/" alt="Logo de la web">
+                </div>
+                <div class="footer__terms">
+                    <a target="_blank" href="condiciones-de-uso.html" class="footer__terms-link link">Condiciones de uso</a>
+                    <a target="_blank" href="aviso-legal.html" class="footer__terms-link link">Política de privacidad</a>
+                    <a target="_blank" href="politica-de-cookies.html" class="footer__terms-link link">Política de cookies</a>
+                    <a target="_blank" href="contacto.html" class="footer__terms-link link">Contacto</a>
+                </div>
+                <div class="footer__social-media">
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100093371010609"><img src="img/social-media/facebook-logo.svg" alt="Facebook"></a>
+                    <a target="_blank" href="https://www.youtube.com/"><img src="img/social-media/youtube-logo.svg" alt="Youtube"></a>
+                    <a target="_blank" href="https://twitter.com/Replay_spain"><img src="img/social-media/twitter-logo.png" alt="twitter"></a>
+                    <a target="_blank" href="https://www.instagram.com/replay_spain/"><img src="img/social-media/instagram-logo.svg" alt="instagram"></a>
+                    <a target="_blank" href="https://www.twitch.tv/"><img src="img/social-media/twitch-logo.svg" alt="twitch"></a>
+                </div>
+            </div>
+            <div class="footer__section3">
+                <p class="footer__copyright">Copyright re-play 2017-2023 - Todos los derechos reservados ©</p>
+            </div>
+        </footer>
+        <div id="div-cookies" style="display: none;">
+            <div class="container">
+                <h2 class="title-cookies">¡Bienvenid@ a Re-play!</h2>
+                <h3 class="subtitle-cookies">Por favor, acepta el uso de cookies para tener la mejor experiencia en nuestro sitio.</h3>
+                <p class="text-cookies">
+                    Con su acuerdo, nosotros y nuestros socios usamos cookies o tecnologías similares para almacenar, acceder y procesar datos personales como su visita en este sitio web. Puede retirar su consentimiento u oponerse al procesamiento de datos basado en intereses legítimos en cualquier momento haciendo clic en "Configuración" o en nuestra Política de privacidad en este sitio web.
+                </p>
+                <a class="div-cookies__link" hreflang="es" href="aviso-legal.html">Aviso Legal</a>
+                y la
+                <a class="div-cookies__link" hreflang="es" href="politica-de-cookies.html">Política de Cookies</a>.
+                <button type="button" class="btn btn-sm btn-primary" onclick="acceptCookies()">
+                    Acepto el uso de cookies
+                </button>
+            </div>
+        </div>
+        <script>
+            new Swiper('.swiper', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: true,
+
+                autoplay: {
+                    delay: 3000,
+                },
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                    dragsize: '20rem',
+                },
+            });
+            const verMasBtn = document.querySelector('.ver-mas-btn');
+            const hiddenImgs = document.querySelectorAll('.hidden');
+
+            verMasBtn.addEventListener('click', function() {
+                hiddenImgs.forEach(function(img) {
+                    img.classList.remove('hidden');
+                });
+
+                verMasBtn.style.display = 'none';
+            });
+            
+            AOS.init();
+            function checkAcceptCookies() {
+                if (localStorage.acceptCookies == 'true') {
+                } else {
+                    $('#div-cookies').show();
+                }
+            }
+            function acceptCookies() {
+                localStorage.acceptCookies = 'true';
+                $('#div-cookies').hide();
+            }
+            $(document).ready(function() {
+                checkAcceptCookies();
+            });
+        </script>
+    </body>
+</html>
