@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #262626;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Capa_1-2" data-name="Capa 1">
+    <rect id="Rectángulo_391" data-name="Rectángulo 391" class="cls-2" width="24" height="24" rx="2" ry="2"/>
+    <path id="youtube-play-svgrepo-com" class="cls-1" d="M18.06,6.25c-2.02-.2-4.05-.28-6.08-.25-2.01-.03-4.03,.06-6.03,.25-1.09,.02-1.96,.91-1.95,2v7.5c-.02,1.09,.86,1.98,1.95,2,2,.2,4.02,.28,6.03,.25,2.03,.03,4.06-.05,6.08-.25,.52,0,1.02-.21,1.38-.59,.37-.38,.57-.89,.57-1.41v-7.5c.02-1.09-.85-1.98-1.94-2,0,0,0,0,0,0ZM9.86,14.97v-5.94l5.19,2.97-5.19,2.97Z"/>
+  </g>
+</svg>
